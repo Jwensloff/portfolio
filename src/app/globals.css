@@ -11,7 +11,7 @@ body {
 
 html{
   overflow: scroll;
-  height: 100vh;
+  /* height: 100vh; */
   scroll-snap-type: y proximity;
 }
 
@@ -20,19 +20,13 @@ html{
   margin: auto;
   padding-left: 10rem;
   padding-right: 10rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* .contentContainer {
-  overflow: scroll;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-} */
-
 section{
   height: 100vh;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 }
