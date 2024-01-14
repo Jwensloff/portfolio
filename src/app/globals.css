@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslategray;
+  color: white;
+}
+
+.container {
+  width: 95vw;
+  margin: auto;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

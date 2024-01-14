@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import img from '../../public/images/jw-high-resolution-logo.jpg';
+import img from '../../public/jw-high-resolution-logo.jpg';
 import AboutMe from './AboutMe/AboutMe';
 
 export default function Home() {
