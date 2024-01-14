@@ -5,3 +5,43 @@
   align-items: center;
   justify-content: center;
 }
+
+.imgContainer {
+  /* margin-top: 5rem; */
+  margin-bottom: 3rem;
+  position: relative;
+  animation: imgAnimation;
+  animation-duration: 4s;
+  animation-fill-mode: backwards;
+  animation-delay: 3s;
+}
+.textWrapper h1{
+  font-size: 30px;
+}
+@keyframes imgAnimation {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: textAnimation;
+  animation-duration: 4s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0px;
+  }
+}
