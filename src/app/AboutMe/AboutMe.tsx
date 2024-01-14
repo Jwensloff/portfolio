@@ -6,7 +6,7 @@ function AboutMe() {
       <div className={styles.imgContainer}>
         <Image
           src='/ProfileImg.jpg'
-          alt=''
+          alt='Jocelyn and her dog Dusty'
           height={400}
           width={400}
           className={styles.image}
