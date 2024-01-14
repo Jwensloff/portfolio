@@ -4,15 +4,19 @@ import styles from './DynamicIntro.module.css';
 function DynamicIntro() {
   return (
     <section className={styles.container}>
-      <Image
-        src='/jw-high-resolution-logo.jpg'
-        height={100}
-        width={100}
-        alt='JW logo'
-      />
-
-      <h1>Jocelyn Wensloff</h1>
-      <p>Software Engineer | Biologist | Dog Mom</p>
+      <div className={styles.imgContainer}>
+        <Image
+          src='/jw-high-resolution-logo.jpg'
+          alt='JW logo'
+          height={175}
+          width={175}
+          className={styles.img}
+        />
+      </div>
+      <div className={styles.textWrapper}>
+        <h1>Jocelyn Wensloff</h1>
+        <p>Software Engineer | Biologist | Dog Mom | Good Human</p>
+      </div>
     </section>
   );
 }
