@@ -3,19 +3,17 @@ import styles from './page.module.css';
 import AboutMe from './AboutMe/AboutMe';
 import DynamicIntro from './components/DynamicIntro/DynamicIntro';
 import ContactMe from './components/ContactMe/ContactMe';
+import Projects from './components/Projects/Projects';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Image
-        src='/jw-high-resolution-logo.jpg'
-        height={100}
-        width={100}
-        alt='JW logo'
-      />
-      <DynamicIntro />
-      <AboutMe />
-      <ContactMe />
+      {/* <div className={styles.contentContainer}> */}
+        <DynamicIntro />
+        <AboutMe />
+        <Projects />
+        <ContactMe />
+      {/* </div> */}
     </main>
   );
 }

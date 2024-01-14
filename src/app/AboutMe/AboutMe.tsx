@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './AboutMe.module.css';
 function AboutMe() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.imgContainer}>
         <Image
           src='/ProfileImg.jpg'
@@ -32,7 +32,7 @@ function AboutMe() {
           challenges where I can apply my growing skillset.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

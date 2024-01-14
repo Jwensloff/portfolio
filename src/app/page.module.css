@@ -1,3 +1,5 @@
-
-
-
+.contentContainer {
+  overflow: scroll;
+  /* height: 100vh; */
+  scroll-snap-type: y proximity;
+}

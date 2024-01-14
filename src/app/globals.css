@@ -9,6 +9,12 @@ body {
   color: white;
 }
 
+html{
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: y proximity;
+}
+
 .container {
   width: 95vw;
   margin: auto;
@@ -18,4 +24,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* .contentContainer {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+} */
+
+section{
+  height: 100vh;
+  scroll-snap-align: end;
 }

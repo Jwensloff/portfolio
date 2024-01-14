@@ -3,7 +3,7 @@ import styles from './ContactMe.module.css';
 
 function ContactMe() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <h1>Contact me</h1>
       <p>jewensloff@gmail.com</p>
       <div className={styles.anchorContainer}>
@@ -26,7 +26,7 @@ function ContactMe() {
           />
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 
