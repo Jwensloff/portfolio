@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(0 31 63);
 }
 
 .imgContainer {
@@ -13,9 +14,9 @@
   position: relative;
 }
 
-.header{
-  margin-bottom: 5rem;
-margin-left: 10rem;
+.header {
+  margin-bottom: 6rem;
+  margin-left: 10rem;
 }
 
 .image {
@@ -38,7 +39,7 @@ margin-left: 10rem;
   padding-right: 2rem;
 }
 
-.secondP{
+.secondP {
   margin-top: 1rem;
 }
 
@@ -50,6 +51,27 @@ margin-left: 10rem;
   margin-top: 8rem;
 }
 
-.badgeContainer img{
+.badgeContainer img {
+  border-radius: 5px;
+}
+
+
+.linkedIn:hover {
+  cursor: pointer;
+}
+
+.anchorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 50px;
+  border-radius: 5px;
+  width: 100%;
+  padding-right: 3rem;
+  margin-top: 3rem;
+}
+
+.linkedIn {
   border-radius: 5px;
 }

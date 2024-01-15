@@ -82,7 +82,7 @@ const SimpleSlider = () => {
         <div className={styles.anchorContainer}>
           <a href={proj.repo}>Explore Repo</a>
 
-          {proj.live !== '' && <a href={proj.live}>Visit Website</a>}
+          {proj.live !== '' && <a href={proj.live}>Demo</a>}
         </div>
       </div>
     );

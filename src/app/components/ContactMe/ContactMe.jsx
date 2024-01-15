@@ -48,7 +48,7 @@ function ContactMe() {
             <input type='submit' value='Send' className={styles.sendButton} />
           </form>
         </div>
-        <div className={styles.anchorContainer}>
+        {/* <div className={styles.anchorContainer}>
           <a href='https://www.linkedin.com/in/jocelynwensloff/'>
             <Image
               src='/LinkedIn-Logo.svg'
@@ -67,7 +67,7 @@ function ContactMe() {
               className={styles.linkedIn}
             />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,11 +1,13 @@
+import React from 'react';
 import Image from 'next/image';
 import styles from './AboutMe.module.css';
+
 function AboutMe() {
   return (
     <section className={styles.container}>
-          <div className={styles.header}>
-            <h1>A little about me...</h1>
-          </div>
+      <div className={styles.header}>
+        <h1>A little about me...</h1>
+      </div>
       <div className={styles.profileContainer}>
         <div className={styles.imgContainer}>
           <Image
@@ -40,6 +42,26 @@ function AboutMe() {
             challenges where I can apply my growing skillset.
           </p>
         </div>
+      </div>
+      <div className={styles.anchorContainer}>
+        <a href='https://www.linkedin.com/in/jocelynwensloff/'>
+          <Image
+            src='/linkedin.png'
+            alt=''
+            width={50}
+            height={50}
+            className={styles.linkedIn}
+          />
+        </a>
+        <a href='https://github.com/Jwensloff'>
+          <Image
+            src='/gitHub.png'
+            alt=''
+            width={30}
+            height={30}
+            className={styles.linkedIn}
+          />
+        </a>
       </div>
       {/* <div className={styles.badgeContainer}>
         <img src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' />
