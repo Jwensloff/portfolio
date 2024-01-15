@@ -5,9 +5,6 @@ function AboutMe() {
     <section className={styles.container}>
       <div className={styles.profileContainer}>
         <div className={styles.imgContainer}>
-          <div className={styles.header}>
-            <h1>A little about me...</h1>
-          </div>
           <Image
             src='/ProfileImg.jpg'
             alt='Jocelyn and her dog Dusty'
@@ -40,18 +37,6 @@ function AboutMe() {
             challenges where I can apply my growing skillset.
           </p>
         </div>
-      </div>
-      <div className={styles.badgeContainer}>
-        <img src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' />
-        <img src='https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white' />
-        <img src='https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB' />
-        <img src='https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white' />
-        <img src='https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white' />
-        <img src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E' />
-        <img src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white' />
-        <img src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white' />
-        <img src='https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white' />
-        <img src='https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e' />
       </div>
     </section>
   );

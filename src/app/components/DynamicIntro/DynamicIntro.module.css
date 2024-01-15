@@ -1,8 +1,10 @@
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .imgContainer {
@@ -11,11 +13,11 @@
   animation: imgAnimation;
   animation-duration: 4s;
   animation-fill-mode: backwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 .textWrapper h1{
-  font-size: 30px;
+  font-size: 2.75rem;
 }
 .img{
   border: 2px solid white;
@@ -46,4 +48,8 @@
   100% {
     top: 0px;
   }
+}
+
+.textWrapper p{
+  font-size: 1.5rem;
 }
