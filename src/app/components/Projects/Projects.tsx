@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import projectData from './projectData.json';
+import Image from 'next/image';
 
 const SimpleSlider = () => {
   var settings = {
@@ -66,20 +67,39 @@ const SimpleSlider = () => {
       />
     );
   }
-  const projects = projectData.map(proj => {
+  const projects = projectData.map((proj) => {
     return (
-      <div>
+      <div className={styles.individual} key={proj.name}>
         <p>{proj.name}</p>
+        <div className={styles.imgContainer}>
+          <Image
+            src={proj.img}
+            alt={`Preview of ${proj.name}`}
+            fill
+            className={styles.image}
+          />
+        </div>
+        <div className={styles.anchorContainer}>
+          <a href={proj.repo}>Explore Repo</a>
+
+          {proj.live !== '' && <a href={proj.live}>Visit Website</a>}
+        </div>
       </div>
-    )
-  })
+    );
+  });
+
   return (
-    <section className={styles.container}>
-      <div className='container'>
-        <p>Here are a few projects</p>
-        <Slider {...settings}>
-          {projects}
-        </Slider>
+    <section className={styles.mainContainer}>
+      <div>
+        <div className={styles.textContainer}>
+          <p>
+            Here are a few projects that I have had the pleasure of creating
+            either collaboratively or as a solo project.
+          </p>
+        </div>
+        <div className='container'>
+          <Slider {...settings}>{projects}</Slider>
+        </div>
       </div>
     </section>
   );

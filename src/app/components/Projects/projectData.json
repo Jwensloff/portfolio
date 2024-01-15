@@ -1,6 +1,6 @@
  [
-  {"name": "WildScribe", "img": "", "repo": "", "live": ""},
-  {"name": "Brew Buddy", "img": "", "repo": "", "live": ""},
-  {"name": "", "img": "", "repo": "", "live": ""},
-  {"name": "", "img": "", "repo": "", "live": ""}
+  {"name": "BookClub", "img": "/BookClub.png", "repo": "https://github.com/banjaminh/BookClub", "live": ""},
+  {"name": "WildScribe", "img": "/WildScribe.png", "repo": "https://github.com/2305-WildScribe/2305-WildScribe-FE", "live": ""},
+  {"name": "Brew Buddy", "img": "/brew-buddy.png", "repo": "https://github.com/Jwensloff/brew-buddy?tab=readme-ov-file", "live": "https://brew-buddy.vercel.app/"},
+  {"name": "Libation Station", "img": "/libation-station.png", "repo": "https://github.com/Jwensloff/libation-station/blob/main/README.md", "live": "https://libation-station.vercel.app/"}
 ]

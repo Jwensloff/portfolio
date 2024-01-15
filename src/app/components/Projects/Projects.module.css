@@ -1,0 +1,43 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainContainer p {
+  text-align: center;
+}
+
+.textContainer {
+  margin-bottom: 100px;
+}
+
+.imgContainer {
+  flex: 1;
+  position: relative;
+  width: 95%;
+  height: 200px;
+}
+
+.image {
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.anchorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anchorContainer a {
+  text-decoration: none;
+  color: white;
+  margin: 1rem;
+}
+
+.anchorContainer a:hover {
+  text-decoration: underline;
+}
+
