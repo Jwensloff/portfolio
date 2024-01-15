@@ -5,63 +5,63 @@ import styles from './AboutMe.module.css';
 function AboutMe() {
   return (
     <section className={styles.container}>
-      <div className={styles.header}>
-        <h1>A little about me...</h1>
-      </div>
-      <div className={styles.profileContainer}>
-        <div className={styles.imgContainer}>
-          <Image
-            src='/ProfileImg.jpg'
-            alt='Jocelyn and her dog Dusty'
-            height={400}
-            width={400}
-            className={styles.image}
-          />
+      <div className={styles.innerContainer}>
+        <div className={styles.header}>
+          <h1>A bit about me...</h1>
         </div>
-        <div className={styles.textContainer}>
-          <p>
-            I am a frontend software engineer with 5+ of experience in
-            environmental science, stream ecology, and fisheries biology. In my
-            previous career, I dedicated many hours to studying how a single
-            molecule or organism can impact a larger compound, or environment.
-            That lens was extremely beneficial when I was first exposed to
-            coding through R to analyze my graduate research. During my time
-            utilizing R, I quickly fell in love with the logic and problem
-            solving necessary to code.
-          </p>
+        <div className={styles.profileContainer}>
+          <div className={styles.imgContainer}>
+            <Image
+              src='/ProfileImg.jpg'
+              alt='Jocelyn and her dog Dusty'
+              height={350}
+              width={350}
+              className={styles.image}
+            />
+          </div>
+          <div className={styles.textContainer}>
+            <p>Software Engineer | </p>
+            <p>
+              As a software engineer with roots in biology and ecology, I bring
+              a uique perspective to coding. Drawing parallels between the
+              biological and coding realms, I've honed a unique perspective that
+              enables me to perceive how a line of code can exert influence on
+              the broader application, akin to the way an organism shapes its
+              environment.
+            </p>
 
-          <p className={styles.secondP}>
-            This new infatuation with coding inspired me to transition careers
-            to software engineering. Now as a software engineer, I utilize my
-            ecology lens to understand how a single line of code can impact the
-            larger application. I am eager to leverage my cumulative skillset in
-            frontend development to contribute meaningfully to areas such as
-            climate, health, education, finance, or customer experience
-            technology. Excited about the intersection of my diverse background
-            and the dynamic field of software engineering, I am ready to tackle
-            challenges where I can apply my growing skillset.
-          </p>
+            <p className={styles.secondP}>
+              This lens has been instrumental in my ability to navigate the
+              complexities of software engineering. It has empowered me to not
+              only identify potential issues at the code level but also
+              anticipate their broader implications on the overall application.
+              By leveraging this holistic approach, I have achieved a heightened
+              awareness of the interconnected nature of software components,
+              allowing me to craft solutions that consider the entire ecosystem
+              of an application.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className={styles.anchorContainer}>
-        <a href='https://www.linkedin.com/in/jocelynwensloff/'>
-          <Image
-            src='/linkedin.png'
-            alt=''
-            width={50}
-            height={50}
-            className={styles.linkedIn}
-          />
-        </a>
-        <a href='https://github.com/Jwensloff'>
-          <Image
-            src='/gitHub.png'
-            alt=''
-            width={30}
-            height={30}
-            className={styles.linkedIn}
-          />
-        </a>
+        <div className={styles.anchorContainer}>
+          <a href='https://www.linkedin.com/in/jocelynwensloff/'>
+            <Image
+              src='/linkedin.png'
+              alt=''
+              width={50}
+              height={50}
+              className={styles.linkedIn}
+            />
+          </a>
+          <a href='https://github.com/Jwensloff'>
+            <Image
+              src='/gitHub.png'
+              alt=''
+              width={30}
+              height={30}
+              className={styles.linkedIn}
+            />
+          </a>
+        </div>
       </div>
       {/* <div className={styles.badgeContainer}>
         <img src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' />

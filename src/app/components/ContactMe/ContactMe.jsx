@@ -48,26 +48,26 @@ function ContactMe() {
             <input type='submit' value='Send' className={styles.sendButton} />
           </form>
         </div>
-        {/* <div className={styles.anchorContainer}>
-          <a href='https://www.linkedin.com/in/jocelynwensloff/'>
-            <Image
-              src='/LinkedIn-Logo.svg'
-              alt=''
-              width={100}
-              height={50}
-              className={styles.linkedIn}
-            />
-          </a>
-          <a href='https://github.com/Jwensloff'>
-            <Image
-              src='/gitHub.jpg'
-              alt=''
-              width={100}
-              height={50}
-              className={styles.linkedIn}
-            />
-          </a>
-        </div> */}
+      </div>
+        <div className={styles.anchorContainer}>
+        <a href='https://www.linkedin.com/in/jocelynwensloff/'>
+          <Image
+            src='/linkedin.png'
+            alt=''
+            width={50}
+            height={50}
+            className={styles.linkedIn}
+          />
+        </a>
+        <a href='https://github.com/Jwensloff'>
+          <Image
+            src='/gitHub.png'
+            alt=''
+            width={30}
+            height={30}
+            className={styles.linkedIn}
+          />
+        </a>
       </div>
     </section>
   );

@@ -23,6 +23,7 @@
 
 .textContainer p{
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .imgContainer {
@@ -51,15 +52,4 @@
 
 .anchorContainer a:hover {
   text-decoration: underline;
-}
-
-.badgeContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.badgeContainer img{
-  border-radius: 5px;
 }
