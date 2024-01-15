@@ -30,15 +30,19 @@ function ContactMe() {
   return (
     <section className={styles.container}>
       <h1>Contact me</h1>
-      <form ref={form} onSubmit={sendEmail} className={styles.form}>
-        <label>Your Name</label>
-        <input type='text' name='user_name' />
-        <label>Your Email</label>
-        <input type='email' name='user_email' />
-        <label>Message</label>
-        <textarea name='message' />
-        <input type='submit' value='Send' />
-      </form>
+      <div className={styles.formConainer}>
+        <form ref={form} onSubmit={sendEmail} className={styles.form}>
+          <label className={styles.label}>Your Name</label>
+          <input type='text' name='user_name' className={styles.input} />
+          <label className={styles.label}>Your Email</label>
+          <input type='email' name='user_email' className={styles.input} />
+          <label className={styles.label}>Subject</label>
+          <input type='text' name='message_subject' className={styles.input} />
+          <label className={styles.label}>Message</label>
+          <textarea name='message' className={styles.textarea} />
+          <input type='submit' value='Send' className={styles.sendButton} />
+        </form>
+      </div>
       <div className={styles.anchorContainer}>
         <a href='https://www.linkedin.com/in/jocelynwensloff/'>
           <Image
