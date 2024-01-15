@@ -1,7 +1,7 @@
 .mainContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 
@@ -9,8 +9,20 @@
   text-align: center;
 }
 
+.topContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
 .textContainer {
   margin-bottom: 100px;
+  width: 80%;
+}
+
+.textContainer p{
+  text-align: center;
 }
 
 .imgContainer {
@@ -41,3 +53,13 @@
   text-decoration: underline;
 }
 
+.badgeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.badgeContainer img{
+  border-radius: 5px;
+}

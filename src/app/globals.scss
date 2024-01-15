@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Avenir';
 }
 
 body {
@@ -9,8 +10,8 @@ body {
   color: white;
 }
 
-html{
-  overflow: scroll;
+html {
+  overflow-y: scroll;
   height: 100vh;
   scroll-snap-type: y proximity;
 }
@@ -25,11 +26,16 @@ html{
   justify-content: space-between;
 }
 
-section{
+section {
   height: 100vh;
   scroll-snap-align: start;
 }
 
-#shadow-host-companion{
+#shadow-host-companion {
   display: none;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/Avenir Next Condensed.ttf') format('woff');
 }

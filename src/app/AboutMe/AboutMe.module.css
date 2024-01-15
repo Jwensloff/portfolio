@@ -14,7 +14,8 @@
 }
 
 .header{
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
+margin-left: 10rem;
 }
 
 .image {
@@ -46,7 +47,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 8rem;
 }
 
 .badgeContainer img{
