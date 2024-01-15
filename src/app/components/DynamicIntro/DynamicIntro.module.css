@@ -1,10 +1,21 @@
-
 .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url('/hiking-out.jpeg');
+  background-size: cover;
+  background-position: center 100px right;
+    background-repeat: no-repeat;
+}
 
+.innerContainer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .imgContainer {
@@ -16,12 +27,10 @@
   animation-delay: 2s;
 }
 
-.textWrapper h1{
+.textWrapper h1 {
   font-size: 2.75rem;
 }
-.img{
-  border: 2px solid white;
-}
+
 @keyframes imgAnimation {
   0% {
     top: -600px;
@@ -32,6 +41,7 @@
 }
 
 .textWrapper {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,6 +60,6 @@
   }
 }
 
-.textWrapper p{
+.textWrapper p {
   font-size: 1.5rem;
 }
