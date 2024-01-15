@@ -1,10 +1,7 @@
-@import '/global.scss';
-
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Avenir';
 }
 
 .imgContainer {
@@ -16,8 +13,9 @@
   position: relative;
 }
 
-.header {
-  margin-bottom: 1rem;
+.header{
+  margin-bottom: 5rem;
+margin-left: 10rem;
 }
 
 .image {
@@ -40,6 +38,18 @@
   padding-right: 2rem;
 }
 
-.secondP {
+.secondP{
   margin-top: 1rem;
+}
+
+.badgeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8rem;
+}
+
+.badgeContainer img{
+  border-radius: 5px;
 }
