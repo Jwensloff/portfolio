@@ -39,5 +39,20 @@ section {
 
 @font-face {
   font-family: 'Avenir';
-  src: url('/Avenir Next Condensed.ttf') format('woff');
+  src: url('/fonts/Avenir Next Condensed.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'arista';
+  src: url('/fonts/arista-sans/Arista Sans.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'CH';
+  src: url('/fonts/cooper-hewitt/CooperHewitt-Medium.otf') format('woff');
+}
+
+@font-face {
+  font-family: 'raffa';
+  src: url('/fonts/raffa-alverado/Raffa Alverado - Free Trial.ttf') format('woff');
 }
