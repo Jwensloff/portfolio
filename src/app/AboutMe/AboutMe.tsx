@@ -14,13 +14,14 @@ function AboutMe() {
             <Image
               src='/ProfileImg.jpg'
               alt='Jocelyn and her dog Dusty'
-              height={350}
-              width={350}
+              height={325}
+              width={325}
               className={styles.image}
             />
+            <p>View Resume</p>
           </div>
           <div className={styles.textContainer}>
-            <p>Software Engineer | </p>
+            <p>Software Engineer | Biologist | </p>
             <p>
               As a software engineer with roots in biology and ecology, I bring
               a uique perspective to coding. Drawing parallels between the
@@ -42,39 +43,14 @@ function AboutMe() {
             </p>
           </div>
         </div>
-        <div className={styles.anchorContainer}>
-          <a href='https://www.linkedin.com/in/jocelynwensloff/'>
-            <Image
-              src='/linkedin.png'
-              alt=''
-              width={50}
-              height={50}
-              className={styles.linkedIn}
-            />
-          </a>
-          <a href='https://github.com/Jwensloff'>
-            <Image
-              src='/gitHub.png'
-              alt=''
-              width={30}
-              height={30}
-              className={styles.linkedIn}
-            />
-          </a>
-        </div>
+            {/* <div className={styles.logoContainer}>
+              <Image src='/react-blue.png' alt='' height={50} width={50} />
+              <Image src='/nextjs.png' alt='' height={50} width={60} />
+              <Image src='/TypeScript.png' alt='' height={50} width={50} />
+              <Image src='/SASS_logo.png' alt='' height={50} width={50} />
+              <Image src='/Redux.png' alt='' height={50} width={60} />
+            </div> */}
       </div>
-      {/* <div className={styles.badgeContainer}>
-        <img src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' />
-        <img src='https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white' />
-        <img src='https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB' />
-        <img src='https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white' />
-        <img src='https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white' />
-        <img src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E' />
-        <img src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white' />
-        <img src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white' />
-        <img src='https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white' />
-        <img src='https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e' />
-      </div> */}
     </section>
   );
 }

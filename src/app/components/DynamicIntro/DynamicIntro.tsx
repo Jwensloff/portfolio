@@ -17,7 +17,7 @@ function DynamicIntro() {
         </div>
         <div className={styles.textWrapper}>
           <h1>Jocelyn Wensloff</h1>
-          <p>Software Engineer | Biologist | Creator</p>
+          <p>Software Engineer</p>
         </div>
       </div>
     </section>
