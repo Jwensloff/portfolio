@@ -3,17 +3,29 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.innerContainer {
+  border-top: 1px solid lightgray;
+  background-color: rgba(200, 207, 229, 0.5);
+  height: 100%;
+  width: 100%;
 }
 
 .mainContainer p {
   text-align: center;
 }
 
-.topContent{
+.sliderContainer{
+  width: 50%;
+}
+
+.topContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .textContainer {
@@ -21,7 +33,7 @@
   width: 80%;
 }
 
-.textContainer p{
+.textContainer p {
   text-align: center;
   font-size: 1.5rem;
 }
@@ -29,7 +41,7 @@
 .imgContainer {
   flex: 1;
   position: relative;
-  width: 95%;
+  /* width: 95%; */
   height: 200px;
 }
 

@@ -13,9 +13,9 @@ body {
 }
 
 html {
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-snap-type: y proximity;
+  // overflow-y: scroll;
+  // min-height: 100vh;
+  // scroll-snap-type: y proximity;
 }
 
 .container {
@@ -30,7 +30,7 @@ html {
 
 section {
   height: 100vh;
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
 }
 
 #shadow-host-companion {
