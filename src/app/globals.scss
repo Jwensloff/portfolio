@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Nimbus Sans Narrow", sans-serif-condensed, sans-serif
+  font-family: 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
 }
 
 body {
@@ -29,6 +29,9 @@ html {
 }
 
 section {
+  z-index: 1;
+  position: relative;
+
   // height: 100vh;
   // scroll-snap-align: start;
 }
@@ -41,4 +44,3 @@ section {
   font-family: 'Avenir';
   src: url('/fonts/Avenir Next Condensed.ttf') format('woff');
 }
-

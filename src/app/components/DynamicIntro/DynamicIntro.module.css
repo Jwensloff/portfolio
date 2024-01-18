@@ -4,16 +4,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/hiking-out.jpeg');
+  /* background-image: url('/hiking-out.jpeg');
   background-size: cover;
   background-position: center 100px right;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   padding: 3rem;
   height: 100vh;
 }
 
+.heroImg {
+  z-index: -5;
+  object-fit: cover;
+  position: absolute;
+  transform-origin: top;
+  animation: header-image-animation linear forwards;
+  animation-timeline: view();
+  animation-range: exit;
+}
+@keyframes header-image-animation {
+  25% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+    scale: 3;
+  }
+}
+
 .img {
   border: 4px solid rgb(200, 207, 229);
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
 }
 
 .innerContainer {
@@ -25,6 +51,11 @@
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+
+  animation: fade-out linear;
+  animation-timeline: view();
+  animation-range: exit;
+  /* animation-range: exit -200px; */
 }
 
 .imgContainer {
@@ -56,6 +87,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
   animation: textAnimation;
   animation-duration: 4s;
   animation-fill-mode: backwards;

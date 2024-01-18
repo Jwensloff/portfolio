@@ -5,6 +5,12 @@ import styles from './DynamicIntro.module.css';
 function DynamicIntro() {
   return (
     <section className={styles.container}>
+      <Image 
+        src='/hiking-out.jpeg'
+        alt=''
+        fill
+        className={styles.heroImg}
+      />
       <div className={styles.innerContainer}>
         <div className={styles.imgContainer}>
           <Image
