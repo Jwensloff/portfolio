@@ -3,13 +3,17 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding: 3rem;
+  /* padding-right: 3rem;
+  padding-left: 3rem; */
+  height: 100vh;
 }
 
 .innerContainer {
-  border-top: 1px solid lightgray;
-  background-color: rgba(200, 207, 229, 0.5);
+  /* background-color: rgba(200, 207, 229, 0.5);
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%; */
+  /* border-top: 1px solid lightgray; */
   height: 100%;
   width: 100%;
 }

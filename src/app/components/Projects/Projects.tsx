@@ -91,7 +91,7 @@ const SimpleSlider = () => {
           </div>
           <div className={styles.sliderContainer}>
             <div className='container'>
-              {/* <Slider {...settings}>{projects}</Slider> */}
+              <Slider {...settings}>{projects}</Slider>
             </div>
           </div>
         </div>

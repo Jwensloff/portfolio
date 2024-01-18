@@ -91,8 +91,8 @@ function ContactMe() {
               <textarea
                 name='message'
                 className={styles.textarea}
-                placeholder='Your Message'
-                aria-label='Enter Message'
+                placeholder='Your message'
+                aria-label='Enter message'
               />
               <input type='submit' value='Send' className={styles.sendButton} />
             </form>

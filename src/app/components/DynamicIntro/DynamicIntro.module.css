@@ -9,6 +9,7 @@
   background-position: center 100px right;
   background-repeat: no-repeat;
   padding: 3rem;
+  height: 100vh;
 }
 
 .img {
@@ -23,6 +24,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .imgContainer {
@@ -31,7 +33,7 @@
   animation: imgAnimation;
   animation-duration: 4s;
   animation-fill-mode: backwards;
-  animation-delay: 2s;
+  /* animation-delay: 2s; */
 }
 
 .textWrapper h1 {
@@ -42,7 +44,7 @@
 
 @keyframes imgAnimation {
   0% {
-    top: -600px;
+    top: -100vh;
   }
   100% {
     top: 0px;
@@ -61,10 +63,10 @@
 
 @keyframes textAnimation {
   0% {
-    top: -600px;
+    bottom: -100vh;
   }
   100% {
-    top: 0px;
+    bottom: 0px;
   }
 }
 

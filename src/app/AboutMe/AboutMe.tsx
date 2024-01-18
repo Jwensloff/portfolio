@@ -7,11 +7,8 @@ function AboutMe() {
   return (
     <section className={styles.container}>
       <div className={styles.innerContainer}>
-        {/* <div className={styles.profileContainer}> */}
           <div className={styles.imgContainer}>
-            {/* <div className={styles.header}> */}
               <h1>A bit about me...</h1>
-            {/* </div> */}
             <Image
               src='/ProfileImg.jpg'
               alt='Jocelyn and her dog Dusty'
