@@ -46,7 +46,7 @@ function ContactMe() {
             <a href='https://github.com/Jwensloff'>
               <FontAwesomeIcon icon={faGithub} className={styles.icon} />
             </a>
-            <a>
+            <a href='mailto:jewensloff@gmail.com'>
               <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             </a>
           </div>

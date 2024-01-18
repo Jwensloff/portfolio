@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Avenir';
+  font-family: "Nimbus Sans Narrow", sans-serif-condensed, sans-serif
 }
 
 body {
@@ -42,17 +42,3 @@ section {
   src: url('/fonts/Avenir Next Condensed.ttf') format('woff');
 }
 
-@font-face {
-  font-family: 'arista';
-  src: url('/fonts/arista-sans/Arista Sans.ttf') format('woff');
-}
-
-@font-face {
-  font-family: 'CH';
-  src: url('/fonts/cooper-hewitt/CooperHewitt-Medium.otf') format('woff');
-}
-
-@font-face {
-  font-family: 'raffa';
-  src: url('/fonts/raffa-alverado/Raffa Alverado - Free Trial.ttf') format('woff');
-}
