@@ -2,15 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './DynamicIntro.module.css';
 
-function DynamicIntro() {
+type DynamicIntroProps = {
+  introRef: React.RefObject<HTMLElement | null>;
+
+};
+
+const DynamicIntro = ({ introRef }: DynamicIntroProps) => {
   return (
-    <section className={styles.container}>
-      <Image 
-        src='/hiking-out.jpeg'
-        alt=''
-        fill
-        className={styles.heroImg}
-      />
+    <section className={styles.container} ref={introRef as React.RefObject<HTMLElement>}>
+      <Image src='/hiking-out.jpeg' alt='' fill className={styles.heroImg} />
       <div className={styles.innerContainer}>
         <div className={styles.imgContainer}>
           <Image
@@ -28,6 +28,6 @@ function DynamicIntro() {
       </div>
     </section>
   );
-}
+};
 
 export default DynamicIntro;
