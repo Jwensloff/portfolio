@@ -10,7 +10,7 @@ type DynamicIntroProps = {
 const DynamicIntro = ({ introRef }: DynamicIntroProps) => {
   return (
     <section className={styles.container} ref={introRef as React.RefObject<HTMLElement>}>
-      <Image src='/hiking-out.jpeg' alt='' fill className={styles.heroImg} />
+      <Image src='https://images.pexels.com/photos/5224907/pexels-photo-5224907.jpeg' alt='' fill className={styles.heroImg} />
       <div className={styles.innerContainer}>
         <div className={styles.imgContainer}>
           <Image

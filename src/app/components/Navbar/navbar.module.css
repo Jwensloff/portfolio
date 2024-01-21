@@ -9,3 +9,41 @@
   flex-direction: column;
   margin-left: 2rem;
 }
+
+.container span {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  display: none;
+}
+
+.homeBtn:hover,
+.aboutBtn:hover,
+.projectsBtn:hover,
+.contactBtn:hover {
+  cursor: pointer;
+  background-color: rgb(0 31 63);
+  color: lightgray;
+}
+
+span:hover .text {
+  display: block;
+}
+
+.homeBtn,
+.aboutBtn,
+.projectsBtn,
+.contactBtn {
+  /* display: flex; */
+  padding: 0.5rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  /* border-radius: 50%; */
+}
+
+.fa {
+  width: 1.5rem;
+  height: 1.5rem;
+}
