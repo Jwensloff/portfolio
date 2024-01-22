@@ -7,7 +7,11 @@ import 'slick-carousel/slick/slick-theme.css';
 import projectData from './projectData.json';
 import Image from 'next/image';
 
-const SimpleSlider = () => {
+type ProjectsProps = {
+  projectsRef: React.RefObject<HTMLElement | null>;
+};
+
+const Projects = ({ projectsRef }: ProjectsProps) => {
   var settings = {
     dots: true,
     infinite: true,
@@ -77,7 +81,7 @@ const SimpleSlider = () => {
   });
 
   return (
-    <section className={styles.mainContainer}>
+    <section className={styles.mainContainer} ref={projectsRef as React.RefObject<HTMLElement>}>
       <div className={styles.innerContainer}>
         <div className={styles.topContent}>
           <div className={styles.textContainer}>
@@ -100,4 +104,4 @@ const SimpleSlider = () => {
   );
 };
 
-export default SimpleSlider;
+export default Projects;

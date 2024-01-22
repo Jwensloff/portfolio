@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import styles from './ContactMe.module.css';
 import React, { FormEvent, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
@@ -7,7 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
-function ContactMe() {
+type ContactMeProps = {
+  contactRef: React.RefObject<HTMLElement | null>;
+};
+
+function ContactMe({ contactRef }: ContactMeProps) {
   const [displayForm, setDisplayForm] = useState<boolean>(false);
   const formRef = useRef<HTMLFormElement | null>(null);
 
@@ -35,7 +38,10 @@ function ContactMe() {
   };
 
   return (
-    <section className={styles.container}>
+    <section
+      ref={contactRef as React.RefObject<HTMLElement>}
+      className={styles.container}
+    >
       <div className={styles.innerContainer}>
         <div className={styles.contentWrapper}>
           <h1 className={styles.text}>Let's connect</h1>
