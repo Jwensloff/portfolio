@@ -22,19 +22,21 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
     console.log(ref.current);
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
-  const [showMenu, setShowMenu] = useState<boolean>(false);
 
+  const [hideMenu, setHideMenu] = useState<boolean>(true);
+  console.log(hideMenu)
+  
   return (
     <div className={styles.container}>
       <button
         className={styles.menuButton}
-        onClick={() => setShowMenu(!showMenu)}
+        onClick={() => setHideMenu(!hideMenu)}
       >
         <FontAwesomeIcon className={styles.fa} icon={faBars} />
       </button>
       <span>
         <button
-          className={`${styles.homeBtn} ${showMenu ? styles.hidden : ''}`}
+          className={`${styles.homeBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(introRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faHouse} />
@@ -43,7 +45,7 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
       </span>
       <span>
         <button
-          className={`${styles.aboutBtn} ${showMenu ? styles.hidden : ''}`}
+          className={`${styles.aboutBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(aboutRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faUser} />
@@ -52,7 +54,7 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
       </span>
       <span>
         <button
-          className={`${styles.projectsBtn} ${showMenu ? styles.hidden : ''}`}
+          className={`${styles.projectsBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(projectsRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faCode} />
@@ -61,7 +63,7 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
       </span>
       <span>
         <button
-          className={`${styles.contactBtn} ${showMenu ? styles.hidden : ''}`}
+          className={`${styles.contactBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(contactRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faEnvelope} />
