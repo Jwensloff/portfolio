@@ -28,7 +28,6 @@
   }
 }
 
-
 @keyframes fade-out {
   to {
     opacity: 0;
@@ -94,4 +93,31 @@
 
 .textWrapper p {
   font-size: 1.5rem;
+}
+
+@media (max-width: 740px) {
+  .innerContainer {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .textWrapper {
+    font-size: 2rem;
+  }
+
+  .img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .textWrapper h1{
+    font-size: 2.25rem;
+    font-weight: bold;
+  }
+  .textWrapper p{
+    font-size: 1.25rem;
+  }
+  .innerContainer {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
 }
