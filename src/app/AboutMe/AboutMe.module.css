@@ -1,9 +1,8 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 3rem; */
   padding-bottom: 0rem;
 }
 
@@ -13,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 80%;
+  width: 80%;
 }
 
 .content {
@@ -21,6 +20,20 @@
 }
 
 .imgContainer {
+  position: relative;
+  width: 375px;
+  height: 375px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  justify-content: space-evenly;
+  padding-right: 2rem; */
+  /* border: 1px solid rgb(0 31 63); */
+}
+
+.leftContent{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,8 +59,8 @@
 }
 
 .image {
-  object-fit: contain;
-  border: 2px solid rgb(0 31 63);
+  object-fit: cover;
+ 
 }
 
 .textContainer {
@@ -75,4 +88,49 @@
   font-weight: bolder;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .textContainer {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+}
 
+@media (max-width: 1050px) {
+  .innerContainer {
+    max-width: 95%;
+  }
+  .leftContent{
+    padding: 0px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .resumeButton {
+    padding: 10px 20px;
+    background-color: rgb(220, 215, 215);
+    color: rgb(0 31 63);
+    text-decoration: none;
+    border: 1px solid rgb(0 31 63);
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .imgContainer {
+    max-width: 350px;
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .imgContainer {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}

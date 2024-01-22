@@ -14,23 +14,24 @@ const AboutMe = ({ aboutRef }: AboutMeProps) => {
     >
       <div className={styles.innerContainer}>
         <div className={styles.content}>
-          <div className={styles.imgContainer}>
-            <Image
-              src='/ProfileImg.jpg'
-              alt='Jocelyn and her dog Dusty'
-              height={400}
-              width={400}
-              className={styles.image}
-            />
+          <div className={styles.leftContent}>
+            <div className={styles.imgContainer}>
+              <Image
+                src='/ProfileImg.jpg'
+                alt='Jocelyn and her dog Dusty'
+                fill
+                className={styles.image}
+              />
+            </div>
             {/* <div className={styles.resumeButtonContainer}> */}
-              <a
-                className={styles.resumeButton}
-                href='/resume/Wensloff_Resume.pdf'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                View Resume
-              </a>
+            <a
+              className={styles.resumeButton}
+              href='/resume/Wensloff_Resume.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              View Resume
+            </a>
             {/* </div> */}
           </div>
           <div className={styles.textContainer}>
@@ -41,8 +42,7 @@ const AboutMe = ({ aboutRef }: AboutMeProps) => {
               ecology, I bring a unique perspective to coding. Drawing parallels
               between the biological and coding realms, I've honed a perspective
               that enables me to perceive how a line of code can influence the
-              broader application, akin to the way an organism can impact its
-              environment.
+              broader application.
             </p>
 
             <p>

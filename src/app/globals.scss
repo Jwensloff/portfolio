@@ -20,8 +20,9 @@ html {
 
 .container {
   // width: 95vw;
+  // width: 1280px;
   min-height: 100vh;
-  margin: auto;
+  margin: auto; 
   padding-left: 10rem;
   padding-right: 10rem;
   display: flex;
@@ -30,9 +31,10 @@ html {
 }
 
 section {
+  overflow: hidden;
   z-index: 1;
   position: relative;
-
+  // width: 100vh;
   // height: 100vh;
   // scroll-snap-align: start;
 }
