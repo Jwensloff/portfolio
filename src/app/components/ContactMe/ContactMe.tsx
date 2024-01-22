@@ -16,7 +16,6 @@ function ContactMe({ contactRef }: ContactMeProps) {
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (formRef.current) {
       emailjs
         .sendForm(
