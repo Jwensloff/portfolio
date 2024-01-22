@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +7,7 @@ import {
   faUser,
   faEnvelope,
   faCode,
+  faBars,
 } from '@fortawesome/free-solid-svg-icons';
 
 interface NavBarProps {
@@ -21,12 +22,19 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
     console.log(ref.current);
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (
     <div className={styles.container}>
+      <button
+        className={styles.menuButton}
+        onClick={() => setShowMenu(!showMenu)}
+      >
+        <FontAwesomeIcon className={styles.fa} icon={faBars} />
+      </button>
       <span>
         <button
-          className={styles.homeBtn}
+          className={`${styles.homeBtn} ${showMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(introRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faHouse} />
@@ -35,7 +43,7 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
       </span>
       <span>
         <button
-          className={styles.aboutBtn}
+          className={`${styles.aboutBtn} ${showMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(aboutRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faUser} />
@@ -44,7 +52,7 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
       </span>
       <span>
         <button
-          className={styles.projectsBtn}
+          className={`${styles.projectsBtn} ${showMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(projectsRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faCode} />
@@ -53,7 +61,7 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
       </span>
       <span>
         <button
-          className={styles.contactBtn}
+          className={`${styles.contactBtn} ${showMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(contactRef)}
         >
           <FontAwesomeIcon className={styles.fa} icon={faEnvelope} />

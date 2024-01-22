@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import styles from './ContactMe.module.css';
 import React, { FormEvent, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
@@ -39,7 +38,10 @@ function ContactMe({ contactRef }: ContactMeProps) {
   };
 
   return (
-    <section ref={contactRef as React.RefObject<HTMLElement>} className={styles.container}>
+    <section
+      ref={contactRef as React.RefObject<HTMLElement>}
+      className={styles.container}
+    >
       <div className={styles.innerContainer}>
         <div className={styles.contentWrapper}>
           <h1 className={styles.text}>Let's connect</h1>

@@ -21,6 +21,7 @@
   animation-timeline: view();
   animation-range: exit;
 }
+
 @keyframes header-image-animation {
   25% {
     opacity: 1;
