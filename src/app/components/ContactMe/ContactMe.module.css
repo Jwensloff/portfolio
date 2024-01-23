@@ -1,18 +1,18 @@
 .container {
-  padding-left: 3rem;
-  padding-bottom: 3rem;
-  padding-right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
 .innerContainer {
-  border-radius: 40%;
+  border: 3px double rgb(0 31 63);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
 }
 
 .contentWrapper {
@@ -143,4 +143,23 @@
 .text {
   font-size: 3rem;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .text {
+    font-size: 2rem;
+  }
+  .anchorContainer {
+    width: 90%;
+    gap: 20px;
+  }
+  .or {
+    font-size: 1rem;
+  }
+  .message{
+    font-size: 1rem;
+  }
+  .formConainer{
+    padding: 0.5rem
+  }
 }
