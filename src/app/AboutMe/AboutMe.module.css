@@ -1,5 +1,4 @@
 .container {
-  /* overflow: hidden; */
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,22 +17,20 @@
   height: 90%;
 }
 
-.innerContainer h2 {
+.innerContainer h1{
   margin-bottom: 2rem;
+  font-size: 3rem;
 }
-
 .content {
   display: flex;
   width: 80%;
-  /* border: 1px solid rgb(0 31 63); */
-
-  /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .imgContainer {
   position: relative;
-  width: 375px;
-  height: 375px;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
 }
 
 .leftContent {
@@ -43,7 +40,8 @@
   height: 100%;
   position: relative;
   justify-content: space-evenly;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .resumeButton {
@@ -59,32 +57,30 @@
 .resumeButton:hover {
   background-color: rgb(0 31 63);
   color: lightgray;
+  border: 1px solid lightgray;
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .textContainer {
   min-height: 100%;
   text-decoration: none;
   font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
   display: flex;
   flex-direction: column;
-  /* text-align: center; */
-  /* justify-content: center; */
-  gap: 1rem;
 }
 
-.textContainer h1 {
-  margin-bottom: 1rem;
-  text-decoration: underline;
+.textContainer p {
+  font-family: 'Courier New';
+  margin-top: 1rem;
 }
 
-.textContainer h2 {
-  font-size: 1.2rem;
+.textContainer h2,
+.textContainer h3,
+.textContainer h4{
+
 }
 
 .textContainer span {
@@ -106,6 +102,7 @@
 @media (max-width: 1050px) {
   .innerContainer {
     max-width: 95%;
+    padding: 0.5rem;
   }
   .leftContent {
     padding: 0px;
@@ -116,6 +113,7 @@
   }
   .textContainer {
     text-align: center;
+    width: 100%;
   }
   .resumeButton {
     padding: 10px 20px;
@@ -132,11 +130,18 @@
     max-width: 350px;
     max-height: 350px;
   }
+
+  .textContainer p {
+    margin-top: 5px;
+  }
 }
 
 @media (max-width: 500px) {
   .imgContainer {
     max-width: 200px;
     max-height: 200px;
+  }
+  .textContainer p {
+    margin-top: 0.25rem;
   }
 }

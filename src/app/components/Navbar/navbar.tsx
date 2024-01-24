@@ -24,14 +24,18 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
   };
 
   const [hideMenu, setHideMenu] = useState<boolean>(true);
-  
+
   return (
     <div className={styles.container}>
       <button
         className={styles.menuButton}
         onClick={() => setHideMenu(!hideMenu)}
       >
-        <FontAwesomeIcon className={styles.fa} icon={faBars} />
+        {hideMenu ? (
+          <FontAwesomeIcon className={styles.fa} icon={faBars} />
+        ) : (
+          'X'
+        )}
       </button>
       <span>
         <button
