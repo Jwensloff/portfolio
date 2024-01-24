@@ -21,11 +21,17 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
             className={styles.image}
           />
         </div>
-        {/* <div className={styles.anchorContainer}> */}
-          {/* <a href={proj.repo}>Explore Repo</a> */}
-
-          {/* {proj.live !== '' && <a href={proj.live}>Demo</a>} */}
-        {/* </div> */}
+        <div className={styles.hiddentContent}>
+          <p>{proj.description}</p>
+          <a href={proj.repo} className={styles.anchor}>
+            Repo
+          </a>
+          {proj.live !== '' && (
+            <a href={proj.live} className={styles.anchor}>
+              Demo
+            </a>
+          )}
+        </div>
       </div>
     );
   });
@@ -36,11 +42,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
       ref={projectsRef as React.RefObject<HTMLElement>}
     >
       <div className={styles.innerContainer}>
-        <p>Projects</p>
-        <div className={styles.projectsContainer}>
-
-        {projects}
-        </div>
+        <div className={styles.projectsContainer}>{projects}</div>
       </div>
     </section>
   );
