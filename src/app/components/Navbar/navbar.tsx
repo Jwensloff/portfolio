@@ -24,7 +24,6 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
   };
 
   const [hideMenu, setHideMenu] = useState<boolean>(true);
-  console.log(hideMenu)
   
   return (
     <div className={styles.container}>

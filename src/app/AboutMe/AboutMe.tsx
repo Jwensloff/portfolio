@@ -13,7 +13,9 @@ const AboutMe = ({ aboutRef }: AboutMeProps) => {
       className={styles.container}
     >
       <div className={styles.innerContainer}>
+          <h2>Software Engineer | Biologist | Problem Solver</h2>
         <div className={styles.content}>
+
           <div className={styles.leftContent}>
             <div className={styles.imgContainer}>
               <Image
@@ -36,7 +38,7 @@ const AboutMe = ({ aboutRef }: AboutMeProps) => {
           </div>
           <div className={styles.textContainer}>
             {/* <h1>Jocelyn</h1> */}
-            <h2>Software Engineer | Biologist | Problem Solver</h2>
+            {/* <h2>Software Engineer | Biologist | Problem Solver</h2> */}
             <p>
               As a <span> software engineer </span>with roots in biology and
               ecology, I bring a unique perspective to coding. Drawing parallels
