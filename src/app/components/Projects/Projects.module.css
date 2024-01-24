@@ -1,12 +1,64 @@
 .mainContainer {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px double rgb(0 31 63);
   height: 90%;
   width: 90%;
+  padding: 1rem;
+}
+
+.projectsContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Three columns with equal width */
+  grid-gap: 20px;
+}
+
+.projName {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.imgContainer {
+  position: relative;
+  height: 200px;
+  width: 400px;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.individual {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.individual:hover {
+  border: 1px solid rgb(0 31 63);
+}
+
+.individual:hover .imgContainer {
+  height: 210px;
+  width: 410px;
+}
+
+.CarouselIndicators {
+  font-size: 5rem;
 }

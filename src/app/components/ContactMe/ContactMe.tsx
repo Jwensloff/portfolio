@@ -17,22 +17,18 @@ function ContactMe({ contactRef }: ContactMeProps) {
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (formRef.current) {
-      emailjs
-        .sendForm(
-          'service_ubh16gg',
-          'template_fon9mfs',
-          formRef.current,
-          '04iDXK8794P5na9Uq'
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            formRef.current && formRef.current.reset();
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      const first = process.env.NEXT_PUBLIC_REACT_APP_FIRST ?? '';
+      const second = process.env.NEXT_PUBLIC_REACT_APP_SECOND ?? '';
+      const third = process.env.NEXT_PUBLIC_REACT_APP_THIRD ?? '';
+      emailjs.sendForm(first, second, formRef.current, third).then(
+        (result) => {
+          console.log(result.text);
+          formRef.current && formRef.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     }
   };
 

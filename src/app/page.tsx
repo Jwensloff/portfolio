@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import React from 'react';
 import styles from './page.module.css';
 import AboutMe from './AboutMe/AboutMe';
 import DynamicIntro from './components/DynamicIntro/DynamicIntro';
@@ -7,6 +7,7 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Projects from './components/Projects/Projects';
 import Navbar from './components/Navbar/navbar';
 import { useRef } from 'react';
+import { MantineProvider } from '@mantine/core'; // Import MantineProvider
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -21,6 +22,7 @@ export default function Home() {
   // };
 
   return (
+    // <MantineProvider>
     <main className={styles.main}>
       <Navbar
         introRef={introRef}
@@ -33,5 +35,6 @@ export default function Home() {
       <Projects projectsRef={projectsRef} />
       <ContactMe contactRef={contactRef} />
     </main>
+    // </MantineProvider>
   );
 }
