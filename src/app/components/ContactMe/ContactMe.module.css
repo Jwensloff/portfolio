@@ -3,16 +3,20 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #4e4c4f;
+
 }
 
 .innerContainer {
-  border: 3px double rgb(0 31 63);
+  border: 10px double rgb(0 31 63);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 90%;
   height: 90%;
+  background-color: lightgrey;
+
 }
 
 .contentWrapper {

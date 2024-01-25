@@ -4,44 +4,49 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 0rem;
-  background-color: #3c4858;
-
+  background-color: #4e4c4f;
+  overflow-x: hidden;
 }
 
 .innerContainer {
   padding: 4rem;
-  border: 10px double #3c4858;
+  border: 10px double rgb(0, 31, 63);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
   height: 90%;
-  background-color: #9f8d8d;
+  background-color: lightgray;
   color: black;
 }
 
-.innerContainer h1 {
-  margin-bottom: 2rem;
+.innerContainer h2 {
+  margin-bottom: 1rem;
   font-size: 3rem;
-}
-.animatedHeaders h2,
-.animatedHeaders h3,
-.animatedHeaders h4 {
-  position: relative;
-  left: -100%; 
+  color: rgb(0 31 63);
 }
 
-.animatedHeaders h2 {
-  animation: textAnimation 3s forwards; 
+.animatedHeaders h3,
+.animatedHeaders h4,
+.animatedHeaders h5 {
+  position: relative;
+  left: -100%;
 }
 
 .animatedHeaders h3 {
-  animation: textAnimation 3s 2s forwards; 
+  animation: textAnimation 3s forwards;
+  color: #172a41;
 }
 
 .animatedHeaders h4 {
-  animation: textAnimation 3s 4s forwards; 
+  animation: textAnimation 3s 2s forwards;
+  color: #4d2d61;
+}
+
+.animatedHeaders h5 {
+  animation: textAnimation 3s 4s forwards;
+  color: #752d3c;
 }
 
 @keyframes textAnimation {
@@ -55,13 +60,13 @@
 
 .content {
   display: flex;
-  width: 80%;
+  width: 90%;
 }
 
 .imgContainer {
   position: relative;
   width: 450px;
-  height: 450px;
+  height: 447px;
   overflow: hidden;
 }
 
@@ -98,7 +103,7 @@
 
 .textContainer {
   overflow: hidden;
-
+  width: 100%;
   min-height: 100%;
   text-decoration: none;
   font-size: 20px;
@@ -109,11 +114,6 @@
 .textContainer p {
   font-family: 'Courier New';
   margin-top: 1rem;
-}
-
-.textContainer h2,
-.textContainer h3,
-.textContainer h4 {
 }
 
 .textContainer span {
