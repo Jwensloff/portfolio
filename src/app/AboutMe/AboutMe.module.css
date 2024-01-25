@@ -4,23 +4,55 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 0rem;
+  background-color: #3c4858;
+
 }
 
 .innerContainer {
   padding: 4rem;
-  border: 3px double rgb(0 31 63);
+  border: 10px double #3c4858;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
   height: 90%;
+  background-color: #9f8d8d;
+  color: black;
 }
 
-.innerContainer h1{
+.innerContainer h1 {
   margin-bottom: 2rem;
   font-size: 3rem;
 }
+.animatedHeaders h2,
+.animatedHeaders h3,
+.animatedHeaders h4 {
+  position: relative;
+  left: -100%; 
+}
+
+.animatedHeaders h2 {
+  animation: textAnimation 3s forwards; 
+}
+
+.animatedHeaders h3 {
+  animation: textAnimation 3s 2s forwards; 
+}
+
+.animatedHeaders h4 {
+  animation: textAnimation 3s 4s forwards; 
+}
+
+@keyframes textAnimation {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 .content {
   display: flex;
   width: 80%;
@@ -65,6 +97,8 @@
 }
 
 .textContainer {
+  overflow: hidden;
+
   min-height: 100%;
   text-decoration: none;
   font-size: 20px;
@@ -79,8 +113,7 @@
 
 .textContainer h2,
 .textContainer h3,
-.textContainer h4{
-
+.textContainer h4 {
 }
 
 .textContainer span {

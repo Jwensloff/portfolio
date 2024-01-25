@@ -5,14 +5,18 @@
   flex-direction: column;
   min-height: 100vh;
   overflow-y: hidden;
+  background-color: #1F3B4D;
+
 }
 
 .innerContainer {
+  background-color: lightgray;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 3px double rgb(0 31 63);
+  border: 5px double black;
   height: 90%;
   width: 90%;
   padding: 2rem;
