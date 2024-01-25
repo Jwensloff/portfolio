@@ -7,7 +7,7 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Projects from './components/Projects/Projects';
 import Navbar from './components/Navbar/navbar';
 import { useRef } from 'react';
-import { MantineProvider } from '@mantine/core'; // Import MantineProvider
+// import { MantineProvider } from '@mantine/core'; 
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -15,14 +15,7 @@ export default function Home() {
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLDivElement | null>(null);
 
-  // const handleClick = () => {
-  //   if (!viewRef === null) {
-  //     viewRef.current?.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
-
   return (
-    // <MantineProvider>
     <main className={styles.main}>
       <Navbar
         introRef={introRef}
@@ -35,6 +28,5 @@ export default function Home() {
       <Projects projectsRef={projectsRef} />
       <ContactMe contactRef={contactRef} />
     </main>
-    // </MantineProvider>
   );
 }
