@@ -7,7 +7,8 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Projects from './components/Projects/Projects';
 import Navbar from './components/Navbar/navbar';
 import { useRef } from 'react';
-// import { MantineProvider } from '@mantine/core'; 
+import '@mantine/carousel/styles.css';
+import { MantineProvider } from '@mantine/core';
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -16,17 +17,19 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <main className={styles.main}>
-      <Navbar
-        introRef={introRef}
-        aboutRef={aboutRef}
-        projectsRef={projectsRef}
-        contactRef={contactRef}
-      />
-      <DynamicIntro introRef={introRef} />
-      <AboutMe aboutRef={aboutRef} />
-      <Projects projectsRef={projectsRef} />
-      <ContactMe contactRef={contactRef} />
-    </main>
+    <MantineProvider>
+      <main className={styles.main}>
+        <Navbar
+          introRef={introRef}
+          aboutRef={aboutRef}
+          projectsRef={projectsRef}
+          contactRef={contactRef}
+        />
+        <DynamicIntro introRef={introRef} />
+        <AboutMe aboutRef={aboutRef} />
+        <Projects projectsRef={projectsRef} />
+        <ContactMe contactRef={contactRef} />
+      </main>
+    </MantineProvider>
   );
 }

@@ -6,39 +6,23 @@
 }
 
 body {
-  // background-color: rgb(37, 67,	60);
-  // background-color: rgb(211, 218, 205);
-  background-color: snow;
   color: rgb(0 31 63);
 }
 
-html {
-  // overflow-y: scroll;
-  // min-height: 100vh;
-  // scroll-snap-type: y proximity;
-}
 
 .container {
-  // width: 95vw;
-  // width: 1280px;
-  // height: 100vh;
+ 
   margin: auto; 
-  // padding-left: 10rem;
-  // padding-right: 10rem;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 section {
-  // min-height: 100vh;
 
-  // overflow: hidden;
   z-index: 1;
   position: relative;
-  // width: 100vh;
-  // height: 100vh;
-  // scroll-snap-align: start;
 }
 
 #shadow-host-companion {
