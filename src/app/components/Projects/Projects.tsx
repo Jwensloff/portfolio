@@ -1,38 +1,43 @@
 'use client';
-import React from 'react';
-import styles from './Projects.module.css';
 import '@mantine/carousel/styles.css';
+import styles from './Projects.module.css';
+import { Carousel } from '@mantine/carousel';
 import projectData from './projectData.json';
 import Image from 'next/image';
+import Autoplay from 'embla-carousel-autoplay';
+import { useRef } from 'react';
+import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
+
 type ProjectsProps = {
   projectsRef: React.RefObject<HTMLElement | null>;
 };
 
 const Projects = ({ projectsRef }: ProjectsProps) => {
-  const projects = projectData.map((proj) => {
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
+
+  let projects = projectData.map((proj) => {
     return (
-      <div className={styles.individual} key={proj.name}>
-        <p className={styles.projName}>{proj.name}</p>
-        <div className={styles.imgContainer}>
-          <Image
-            src={proj.img}
-            alt={`Preview of ${proj.name}`}
-            fill
-            className={styles.image}
-          />
+      <Carousel.Slide className={styles.slide}>
+        <div className={styles.slideContent}>
+          <div className={styles.imgContainer}>
+            <Image src={proj.img} alt='' fill className={styles.img} />
+          </div>
+          <div className={styles.slideInfo}>
+            <h2>{proj.name}</h2>
+            <p>{proj.description}</p>
+            <div className={styles.anchorContainer}>
+              <a href={proj.repo} className={styles.anchor}>
+                Repo
+              </a>
+              {proj.live !== '' && (
+                <a href={proj.live} className={styles.anchor}>
+                  Demo
+                </a>
+              )}
+            </div>
+          </div>
         </div>
-        <div className={styles.hiddentContent}>
-          <p>{proj.description}</p>
-          <a href={proj.repo} className={styles.anchor}>
-            Repo
-          </a>
-          {proj.live !== '' && (
-            <a href={proj.live} className={styles.anchor}>
-              Demo
-            </a>
-          )}
-        </div>
-      </div>
+      </Carousel.Slide>
     );
   });
 
@@ -42,7 +47,28 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
       ref={projectsRef as React.RefObject<HTMLElement>}
     >
       <div className={styles.innerContainer}>
-        <div className={styles.projectsContainer}>{projects}</div>
+        <Carousel
+          classNames={{ indicator: styles.CarouselIndicators }}
+          previousControlProps={{
+            'aria-label': 'Previous',
+          }}
+          nextControlProps={{
+            'aria-label': 'Next',
+          }}
+          nextControlIcon={<IconArrowRight className={styles.rightIcon} />}
+          previousControlIcon={<IconArrowLeft className={styles.leftIcon} />}
+          align='start'
+          slideSize={{ base: '100%', sm: '98%' }}
+          slideGap={{ base: 5, xs: 2 }}
+          withIndicators
+          plugins={[autoplay.current]}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={autoplay.current.reset}
+          className={styles.carousel}
+          loop
+        >
+          {projects}
+        </Carousel>
       </div>
     </section>
   );

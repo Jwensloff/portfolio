@@ -4,12 +4,12 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 0rem;
-  background-color: #4e4c4f;
   overflow-x: hidden;
 }
 
 .innerContainer {
   padding: 4rem;
+  border-radius: 20px;
   border: 10px double rgb(0, 31, 63);
   display: flex;
   flex-direction: column;
