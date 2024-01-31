@@ -3,19 +3,19 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: rgb(158, 171, 133);
 }
 
 .innerContainer {
   border-radius: 20px;
 
-  border: 10px double rgb(0 31 63);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 90%;
   height: 90%;
-  background-color: lightgrey;
+  background-color: snow;
 }
 
 .contentWrapper {

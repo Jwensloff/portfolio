@@ -4,15 +4,15 @@ import styles from './AboutMe.module.css';
 import { useInView } from 'react-intersection-observer';
 
 type AboutMeProps = {
-  aboutRef: React.RefObject<HTMLElement | null>;
+  // aboutRef: React.RefObject<HTMLElement | null>;
 };
 
-const AboutMe = ({ aboutRef }: AboutMeProps) => {
+const AboutMe = () => {
   const { ref: textRef, inView } = useInView();
 
   return (
     <section
-      ref={aboutRef as React.RefObject<HTMLElement>}
+      // ref={aboutRef as React.RefObject<HTMLElement>}
       className={styles.container}
     >
       <div className={styles.innerContainer} ref={textRef}>

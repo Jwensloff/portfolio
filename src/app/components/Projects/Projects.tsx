@@ -9,10 +9,10 @@ import { useRef } from 'react';
 import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
 
 type ProjectsProps = {
-  projectsRef: React.RefObject<HTMLElement | null>;
+  // projectsRef: React.RefObject<HTMLElement | null>;
 };
 
-const Projects = ({ projectsRef }: ProjectsProps) => {
+const Projects = () => {
   const autoplay = useRef(Autoplay({ delay: 5000 }));
 
   let projects = projectData.map((proj) => {
@@ -44,7 +44,7 @@ const Projects = ({ projectsRef }: ProjectsProps) => {
   return (
     <section
       className={styles.mainContainer}
-      ref={projectsRef as React.RefObject<HTMLElement>}
+      // ref={projectsRef as React.RefObject<HTMLElement>}
     >
       <div className={styles.innerContainer}>
         <Carousel

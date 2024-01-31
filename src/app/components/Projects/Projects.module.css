@@ -5,16 +5,16 @@
   flex-direction: column;
   height: 100vh;
   overflow-y: hidden;
+  background-color: rgba(232, 161, 14, 0.5);
 }
 
 .innerContainer {
-  background-color: lightgray;
+  background-color: snow;
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 10px double black;
   height: 90%;
   width: 90%;
   padding: 2rem;

@@ -3,21 +3,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding-bottom: 0rem;
-  overflow-x: hidden;
+  background-color: rgba(162, 183, 219, 0.6);
+
 }
 
 .innerContainer {
   padding: 4rem;
   border-radius: 20px;
-  border: 10px double rgb(0, 31, 63);
+  /* border: 10px double rgb(0, 31, 63); */
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
   width: 90%;
   height: 90%;
-  background-color: lightgray;
+  background-color: snow;
   color: black;
 }
 
@@ -64,6 +67,7 @@
 }
 
 .imgContainer {
+  border-radius: 20px;
   position: relative;
   width: 450px;
   height: 447px;
@@ -112,7 +116,6 @@
 }
 
 .textContainer p {
-  font-family: 'Courier New';
   margin-top: 1rem;
 }
 
@@ -121,10 +124,6 @@
 }
 
 @media (max-width: 1200px) {
-  .container {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
   .textContainer {
     display: flex;
     gap: 1rem;

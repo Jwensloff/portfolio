@@ -11,16 +11,13 @@ body {
 
 
 .container {
- 
   margin: auto; 
-  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 section {
-
   z-index: 1;
   position: relative;
 }

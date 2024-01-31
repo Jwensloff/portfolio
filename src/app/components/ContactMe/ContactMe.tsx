@@ -7,10 +7,10 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 type ContactMeProps = {
-  contactRef: React.RefObject<HTMLElement | null>;
+  // contactRef: React.RefObject<HTMLElement | null>;
 };
 
-function ContactMe({ contactRef }: ContactMeProps) {
+function ContactMe() {
   const [displayForm, setDisplayForm] = useState<boolean>(false);
   const formRef = useRef<HTMLFormElement | null>(null);
 
@@ -34,7 +34,7 @@ function ContactMe({ contactRef }: ContactMeProps) {
 
   return (
     <section
-      ref={contactRef as React.RefObject<HTMLElement>}
+      // ref={contactRef as React.RefObject<HTMLElement>}
       className={styles.container}
     >
       <div className={styles.innerContainer}>
