@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(158, 171, 133);
+  background-color: #aab9c0;
 }
 
 .innerContainer {
@@ -16,6 +16,7 @@
   width: 90%;
   height: 90%;
   background-color: snow;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .contentWrapper {

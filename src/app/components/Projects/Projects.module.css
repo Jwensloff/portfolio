@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 100vh;
   overflow-y: hidden;
-  background-color: rgba(232, 161, 14, 0.5);
+  background-color: #aab9c0;
 }
 
 .innerContainer {
@@ -19,6 +19,7 @@
   width: 90%;
   padding: 2rem;
   border-radius: 20px;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .carousel {

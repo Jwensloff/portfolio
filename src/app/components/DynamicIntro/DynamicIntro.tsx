@@ -12,7 +12,7 @@ const DynamicIntro = ({ introRef }: DynamicIntroProps) => {
       className={styles.container}
       ref={introRef as React.RefObject<HTMLElement>}
     >
-      <Image src='/cactus.jpg' alt='' fill className={styles.heroImg} />
+      <Image src='/cacti.jpg' alt='' fill className={styles.heroImg} />
       <div className={styles.innerContainer}>
         <div className={styles.imgContainer}>
           <Image

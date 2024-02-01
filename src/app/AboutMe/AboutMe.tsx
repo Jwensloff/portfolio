@@ -8,6 +8,7 @@ type AboutMeProps = {
 };
 
 const AboutMe = () => {
+  
   const { ref: textRef, inView } = useInView();
 
   return (
