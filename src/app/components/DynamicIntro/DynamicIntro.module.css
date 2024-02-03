@@ -19,10 +19,10 @@
 }
 
 @keyframes header-image-animation {
-  25% {
+  20% {
     opacity: 1;
   }
-  50%,
+  90%,
   100% {
     opacity: 0;
     scale: 2;

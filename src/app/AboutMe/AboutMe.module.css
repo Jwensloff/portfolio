@@ -37,17 +37,14 @@
 
 .animatedHeaders h3 {
   animation: textAnimation 3s forwards;
-  color: #172a41;
 }
 
 .animatedHeaders h4 {
   animation: textAnimation 3s 2s forwards;
-  color: #4d2d61;
 }
 
 .animatedHeaders h5 {
   animation: textAnimation 3s 4s forwards;
-  color: #752d3c;
 }
 
 @keyframes textAnimation {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './AboutMe.module.css';
 import { useInView } from 'react-intersection-observer';
@@ -8,9 +8,14 @@ type AboutMeProps = {
 };
 
 const AboutMe = () => {
-  
   const { ref: textRef, inView } = useInView();
+  const [animate, setAnimate] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (inView) {
+      setAnimate(true);
+    }
+  }, [inView]);
   return (
     <section
       // ref={aboutRef as React.RefObject<HTMLElement>}
@@ -40,7 +45,7 @@ const AboutMe = () => {
           <div className={styles.textContainer}>
             <div
               className={`${styles.headers} ${
-                inView ? styles.animatedHeaders : ''
+                animate ? styles.animatedHeaders : ''
               }`}
             >
               <h3>I'm an accessibility advocate.</h3>
