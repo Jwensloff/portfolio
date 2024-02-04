@@ -17,14 +17,11 @@ const AboutMe = () => {
     }
   }, [inView]);
   return (
-    <section
-      // ref={aboutRef as React.RefObject<HTMLElement>}
-      className={styles.container}
-    >
+    <section className={styles.container}>
       <div className={styles.innerContainer} ref={textRef}>
-        <h2> Hi, I'm Jocelyn!</h2>
         <div className={styles.content}>
           <div className={styles.leftContent}>
+            <h2> Hi, I'm Jocelyn!</h2>
             <div className={styles.imgContainer}>
               <Image
                 src='/ProfileImg.jpg'

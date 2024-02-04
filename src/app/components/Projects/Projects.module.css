@@ -1,108 +1,133 @@
 .mainContainer {
+  min-height: 110vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  height: 100vh;
-  overflow-y: hidden;
+  padding-bottom: 0rem;
+  paddingl: 1rem;
   background-color: #aab9c0;
 }
 
 .innerContainer {
   background-color: snow;
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  min-height: 100vh;
   width: 90%;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 10px 10px 5px grey;
 }
 
-.carousel {
-  width: 90%;
-  padding: 1rem;
-}
-
-.CarouselIndicators {
-  outline: 2px solid blask;
-  width: 20px;
-  height: 10px;
-  border-radius: 5px;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-.slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.leftIcon,
-.rightIcon {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  background-color: white;
-  border: 1px solid darkgrey;
-  border-radius: 100%;
-  bottom: 8rem;
-  cursor: pointer;
-}
-
-.leftIcon {
-  left: 1rem;
-}
-
-.rightIcon {
-  right: 1rem;
-}
-
-.slideContent {
-  display: flex;
-  width: 90%;
+.card {
+  border-radius: 20px;
   position: relative;
+  perspective: 1000px;
+}
+
+.innerCard {
+  border-radius: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.innerCard {
+  transform: rotateY(-180deg);
+}
+
+.frontCard,
+.backCard {
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px grey;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: rgba(170,185,192, 0.3);
+}
+
+.frontCard:hover,
+.backCard:hover {
+  box-shadow: 10px 10px 5px #333;
+  width: 101%;
+  height: 101%;
+  background-color: rgba(170,185,192, 0.4);
+
+}
+
+.logoContainer {
+  height: 4rem;
+  width: 4rem;
+  position: relative;
+  color: black;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.techContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.backCard {
+  background-color: rgba(170,185,192, 0.3);
+  transform: rotateY(180deg);
+}
+
+.backCard p {
+  text-align: center;
+}
+
+.showBack {
+  transform: rotateY(-180deg);
 }
 
 .imgContainer {
-  flex: 2;
   position: relative;
   height: 300px;
-  width: 50px;
+  width: 500px;
+  /* margin-top: 1rem;
+  margin-bottom: 1rem; */
 }
 
 .img {
   object-fit: contain;
 }
 
-.slideInfo {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.anchor {
+.anchor,
+.card button {
   text-decoration: none;
   color: rgb(0 31 63);
   border: 2px solid rgb(0 31 63);
   background-color: lightgray;
-  height: 3rem;
+  height: 2.5rem;
   width: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.anchor:hover {
+.anchor:hover,
+.card button:hover {
   background-color: rgb(0 31 63);
   border: 2px solid lightgray;
   color: lightgray;
+  cursor: pointer;
 }
 
 .anchorContainer {
@@ -111,7 +136,7 @@
 }
 
 @media (max-width: 1200px) {
-  .individual {
+  /* .individual {
     height: 300px;
     width: 400px;
   }
@@ -122,7 +147,7 @@
   .individual:hover .hiddentContent {
     height: 300px;
     width: 400px;
-  }
+  } */
 }
 
 @media (max-width: 1000px) {
