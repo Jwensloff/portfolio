@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import styles from './page.module.css';
-import AboutMe from './AboutMe/AboutMe';
+import AboutMe from './components/AboutMe/AboutMe';
 import DynamicIntro from './components/DynamicIntro/DynamicIntro';
 import ContactMe from './components/ContactMe/ContactMe';
 import Projects from './components/Projects/Projects';

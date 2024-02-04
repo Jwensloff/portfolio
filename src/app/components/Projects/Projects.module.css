@@ -9,6 +9,15 @@
   background-color: #aab9c0;
 }
 
+@keyframes component-animation {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  100% {
+    opacity: 1;
+  }
+}
 .innerContainer {
   background-color: snow;
   color: black;
@@ -20,6 +29,10 @@
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 10px 10px 5px grey;
+  transform-origin: top;
+  animation: component-animation linear;
+  animation-timeline: view();
+  animation-range: enter;
 }
 
 .card {

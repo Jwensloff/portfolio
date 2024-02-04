@@ -9,6 +9,16 @@
   background-color: #aab9c0;
 }
 
+@keyframes component-animation {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  100% {
+    opacity: 1;
+  }
+}
+
 .innerContainer {
   padding: 4rem;
   border-radius: 20px;
@@ -21,6 +31,10 @@
   background-color: snow;
   color: black;
   box-shadow: 10px 10px 5px grey;
+  transform-origin: top;
+  animation: component-animation linear;
+  animation-timeline: view();
+  animation-range: enter;
 }
 
 .innerContainer h2 {
@@ -148,7 +162,6 @@
 
   .innerContainer {
     max-width: 95%;
-    padding: 1rem;
   }
   .leftContent {
     padding: 0px;
