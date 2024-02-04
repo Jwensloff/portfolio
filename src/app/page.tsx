@@ -7,8 +7,6 @@ import ContactMe from './components/ContactMe/ContactMe';
 import Projects from './components/Projects/Projects';
 import Navbar from './components/Navbar/navbar';
 import { useRef } from 'react';
-import '@mantine/carousel/styles.css';
-import { MantineProvider } from '@mantine/core';
 import SectionHeaders from './components/SectionHeaders/SectionHeaders';
 
 export default function Home() {
@@ -18,7 +16,6 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <MantineProvider>
       <main className={styles.main}>
         <Navbar
           introRef={introRef}
@@ -30,24 +27,20 @@ export default function Home() {
         <SectionHeaders
           text={'About-Me'}
           forwardedRef={aboutRef}
-          photoPosition={'top'}
         />
         <AboutMe />
         <SectionHeaders
           text={'Coding-Projects'}
           forwardedRef={projectsRef}
-          photoPosition={'middle'}
         />
 
         <Projects />
         <SectionHeaders
           text={'Contact-Me'}
           forwardedRef={contactRef}
-          photoPosition={'bottom'}
         />
 
         <ContactMe />
       </main>
-    </MantineProvider>
   );
 }
