@@ -19,7 +19,7 @@
   z-index: -1;
 
   transform-origin: top;
-  animation: header-image-animation linear forwards;
+  /* animation: header-image-animation linear forwards; */
   animation-timeline: view();
   animation-range: exit;
 }
@@ -63,7 +63,7 @@
 .imgContainer {
   margin-bottom: 1rem;
   position: relative;
-  /* animation: imgAnimation; */
+  animation: imgAnimation;
   animation-duration: 3s;
   animation-fill-mode: backwards;
 }
