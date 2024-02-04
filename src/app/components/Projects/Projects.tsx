@@ -1,75 +1,76 @@
-'use client';
-import '@mantine/carousel/styles.css';
 import styles from './Projects.module.css';
-import { Carousel } from '@mantine/carousel';
 import projectData from './projectData.json';
 import Image from 'next/image';
-import Autoplay from 'embla-carousel-autoplay';
-import { useRef } from 'react';
-import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
+import { useState } from 'react';
 
-type ProjectsProps = {
-  projectsRef: React.RefObject<HTMLElement | null>;
-};
+const Projects = () => {
+  const [displayBack, setDisplayBack] = useState<boolean[]>(
+    new Array(projectData.length).fill(false)
+  );
 
-const Projects = ({ projectsRef }: ProjectsProps) => {
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
+  const handleClick = (index: number) => {
+    const newDisplayBack = [...displayBack];
+    newDisplayBack[index] = !newDisplayBack[index];
+    setDisplayBack(newDisplayBack);
+  };
 
-  let projects = projectData.map((proj) => {
+  let projects = projectData.map((proj, index) => {
     return (
-      <Carousel.Slide className={styles.slide}>
-        <div className={styles.slideContent}>
-          <div className={styles.imgContainer}>
-            <Image src={proj.img} alt='' fill className={styles.img} />
+      <div className={styles.card} key={index}>
+        <div
+          className={`${styles.innerCard} ${
+            displayBack[index] ? styles.showBack : ''
+          }`}
+        >
+          <div className={styles.frontCard}>
+            <h2>{proj.name}</h2>
+            <div className={styles.imgContainer}>
+              <Image
+                src={proj.img}
+                alt={`screenshot of ${proj.name}`}
+                fill
+                className={styles.image}
+              />
+            </div>
+            <button onClick={() => handleClick(index)}>Learn More</button>
           </div>
-          <div className={styles.slideInfo}>
+          <div className={styles.backCard}>
             <h2>{proj.name}</h2>
             <p>{proj.description}</p>
+            <div className={styles.techContainer}>
+              {proj.tech.map((tech, index) => (
+                <div className={styles.logoContainer}>
+                  <Image
+                    key={index}
+                    src={tech.logo}
+                    alt={tech.logo_name}
+                    fill
+                    className={styles.logo}
+                  />
+                </div>
+              ))}
+            </div>
             <div className={styles.anchorContainer}>
               <a href={proj.repo} className={styles.anchor}>
-                Repo
+                Explore Repo
               </a>
-              {proj.live !== '' && (
+              {proj.live && (
                 <a href={proj.live} className={styles.anchor}>
-                  Demo
+                  Visit Site
                 </a>
               )}
             </div>
+
+            <button onClick={() => handleClick(index)}>Exit</button>
           </div>
         </div>
-      </Carousel.Slide>
+      </div>
     );
   });
 
   return (
-    <section
-      className={styles.mainContainer}
-      ref={projectsRef as React.RefObject<HTMLElement>}
-    >
-      <div className={styles.innerContainer}>
-        <Carousel
-          classNames={{ indicator: styles.CarouselIndicators }}
-          previousControlProps={{
-            'aria-label': 'Previous',
-          }}
-          nextControlProps={{
-            'aria-label': 'Next',
-          }}
-          nextControlIcon={<IconArrowRight className={styles.rightIcon} />}
-          previousControlIcon={<IconArrowLeft className={styles.leftIcon} />}
-          align='start'
-          slideSize={{ base: '100%', sm: '98%' }}
-          slideGap={{ base: 5, xs: 2 }}
-          withIndicators
-          plugins={[autoplay.current]}
-          onMouseEnter={autoplay.current.stop}
-          onMouseLeave={autoplay.current.reset}
-          className={styles.carousel}
-          loop
-        >
-          {projects}
-        </Carousel>
-      </div>
+    <section className={styles.mainContainer}>
+      <div className={styles.innerContainer}>{projects}</div>
     </section>
   );
 };

@@ -3,22 +3,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding-bottom: 0rem;
-  overflow-x: hidden;
+  paddingl: 1rem;
+  background-color: #aab9c0;
+}
+
+@keyframes component-animation {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  100% {
+    opacity: 1;
+  }
 }
 
 .innerContainer {
   padding: 4rem;
   border-radius: 20px;
-  border: 10px double rgb(0, 31, 63);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 90%;
-  background-color: lightgray;
+  min-height: 90vh;
+  background-color: snow;
   color: black;
+  box-shadow: 10px 10px 5px grey;
+  transform-origin: top;
+  animation: component-animation linear;
+  animation-timeline: view();
+  animation-range: enter;
 }
 
 .innerContainer h2 {
@@ -36,17 +52,14 @@
 
 .animatedHeaders h3 {
   animation: textAnimation 3s forwards;
-  color: #172a41;
 }
 
 .animatedHeaders h4 {
   animation: textAnimation 3s 2s forwards;
-  color: #4d2d61;
 }
 
 .animatedHeaders h5 {
   animation: textAnimation 3s 4s forwards;
-  color: #752d3c;
 }
 
 @keyframes textAnimation {
@@ -104,15 +117,16 @@
 .textContainer {
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   text-decoration: none;
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  padding-top: 5rem;
 }
 
 .textContainer p {
-  font-family: 'Courier New';
   margin-top: 1rem;
 }
 
@@ -121,10 +135,6 @@
 }
 
 @media (max-width: 1200px) {
-  .container {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
   .textContainer {
     display: flex;
     gap: 1rem;
@@ -133,9 +143,25 @@
 }
 
 @media (max-width: 1050px) {
+  .animatedHeaders h3,
+  .animatedHeaders h4,
+  .animatedHeaders h5 {
+    position: relative;
+    left: 0%;
+    bottom: -100vh;
+  }
+
+  @keyframes textAnimation {
+    0% {
+      bottom: -100%;
+    }
+    100% {
+      bottom: 0%;
+    }
+  }
+
   .innerContainer {
     max-width: 95%;
-    padding: 0.5rem;
   }
   .leftContent {
     padding: 0px;
@@ -147,6 +173,7 @@
   .textContainer {
     text-align: center;
     width: 100%;
+    padding-top: 0rem;
   }
   .resumeButton {
     padding: 10px 20px;
@@ -170,11 +197,18 @@
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding-top: 0.5rem;
+  }
+
   .imgContainer {
     max-width: 200px;
     max-height: 200px;
   }
   .textContainer p {
     margin-top: 0.25rem;
+  }
+  .leftContent h2 {
+    font-size: 2rem;
   }
 }

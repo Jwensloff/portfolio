@@ -24,7 +24,6 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
   };
 
   const [hideMenu, setHideMenu] = useState<boolean>(true);
-
   return (
     <div className={styles.container}>
       <button
@@ -32,7 +31,11 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
         onClick={() => setHideMenu(!hideMenu)}
       >
         {hideMenu ? (
-          <FontAwesomeIcon className={styles.fa} icon={faBars} />
+          <FontAwesomeIcon
+            className={styles.fa}
+            icon={faBars}
+            aria-label='menu'
+          />
         ) : (
           'X'
         )}
@@ -42,7 +45,11 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
           className={`${styles.homeBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(introRef)}
         >
-          <FontAwesomeIcon className={styles.fa} icon={faHouse} />
+          <FontAwesomeIcon
+            className={styles.fa}
+            icon={faHouse}
+            aria-label='home'
+          />
         </button>
         <p className={styles.text}>Home</p>
       </span>
@@ -51,7 +58,11 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
           className={`${styles.aboutBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(aboutRef)}
         >
-          <FontAwesomeIcon className={styles.fa} icon={faUser} />
+          <FontAwesomeIcon
+            className={styles.fa}
+            icon={faUser}
+            aria-label='About me'
+          />
         </button>
         <p className={styles.text}>About</p>
       </span>
@@ -60,7 +71,11 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
           className={`${styles.projectsBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(projectsRef)}
         >
-          <FontAwesomeIcon className={styles.fa} icon={faCode} />
+          <FontAwesomeIcon
+            className={styles.fa}
+            icon={faCode}
+            aria-label='Projects'
+          />
         </button>
         <p className={styles.text}>Projects</p>
       </span>
@@ -69,7 +84,11 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
           className={`${styles.contactBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(contactRef)}
         >
-          <FontAwesomeIcon className={styles.fa} icon={faEnvelope} />
+          <FontAwesomeIcon
+            className={styles.fa}
+            icon={faEnvelope}
+            aria-label='Contact me'
+          />
         </button>
         <p className={styles.text}>Contact</p>
       </span>

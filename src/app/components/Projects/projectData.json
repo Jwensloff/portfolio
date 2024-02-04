@@ -4,27 +4,43 @@
     "description": "Brew Buddy enables users to search for breweries in any location, presenting them on a map alongside relevant information. Users can easily favorite breweries, and their selections are stored locally for future reference.",
     "img": "/brew-buddy.png",
     "repo": "https://github.com/Jwensloff/brew-buddy?tab=readme-ov-file",
-    "live": "https://brew-buddy.vercel.app/"
+    "live": "https://brew-buddy.vercel.app/",
+    "tech": [
+      { "logo": "/react.png", "logo_name": "React" },
+      { "logo": "/SASS_logo.png", "logo_name": "SASS" }
+    ]
   },
   {
     "name": "BookClub",
     "description": "Book Club offers users the ability to discover and buy books, find or create book clubs, and manage notes for each book within the app.",
     "img": "/BookClub.png",
     "repo": "https://github.com/banjaminh/BookClub",
-    "live": ""
+    "live": "",
+    "tech": [
+      { "logo": "/react_Native.png", "logo_name": "React Native" },
+      { "logo": "/Typescript_logo_2020.png", "logo_name": "TypeScript" },
+      { "logo": "/SASS_logo.png", "logo_name": "SASS" }
+    ]
   },
   {
     "name": "WildScribe",
     "description": "WildScribe lets users organize and manage their adventures through activity journals, offering features like adding, editing, deleting, and searching for activity logs within each journal.",
     "img": "/WildScribe.png",
     "repo": "https://github.com/2305-WildScribe/2305-WildScribe-FE",
-    "live": ""
+    "live": "",
+    "tech": [
+      { "logo": "/react.png", "logo_name": "React" },
+      { "logo": "/Redux.png", "logo_name": "Redux" },
+      { "logo": "/Typescript_logo_2020.png", "logo_name": "TypeScript" },
+      { "logo": "/SASS_logo.png", "logo_name": "SASS" }
+    ]
   },
   {
     "name": "Libation Station",
     "description": "Libation Station enables users to search for and save favorite cocktail recipes using local storage.",
     "img": "/libation-station.png",
     "repo": "https://github.com/Jwensloff/libation-station/blob/main/README.md",
-    "live": "https://libation-station.vercel.app/"
+    "live": "https://libation-station.vercel.app/",
+    "tech": [{ "logo": "/react.png", "logo_name": "React" }]
   }
 ]
