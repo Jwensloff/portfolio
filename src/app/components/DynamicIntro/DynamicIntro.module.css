@@ -33,7 +33,7 @@
   90%,
   100% {
     opacity: 0;
-    scale: 2;
+    /* scale: 2; */
   }
 }
 @-webkit-keyframes header-image-animation {
@@ -43,7 +43,7 @@
   90%,
   100% {
     opacity: 0;
-    scale: 2;
+    /* scale: 2; */
   }
 }
 
@@ -54,7 +54,7 @@
   90%,
   100% {
     opacity: 0;
-    scale: 2;
+    /* scale: 2; */
   }
 }
 
@@ -65,7 +65,7 @@
   90%,
   100% {
     opacity: 0;
-    scale: 2;
+    /* scale: 2; */
   }
 }
 

@@ -39,7 +39,7 @@ const Projects = () => {
             <p>{proj.description}</p>
             <div className={styles.techContainer}>
               {proj.tech.map((tech, index) => (
-                <div className={styles.logoContainer}>
+                <div className={styles.logoContainer} key={index}>
                   <Image
                     key={index}
                     src={tech.logo}
