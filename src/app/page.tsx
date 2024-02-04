@@ -26,7 +26,7 @@ export default function Home() {
       />
       <DynamicIntro introRef={introRef} />
       <AboutMe />
-      <TestComp />
+      {/* <TestComp /> */}
       <SectionHeaders text={'About-Me'} forwardedRef={aboutRef} />
       <SectionHeaders text={'Coding-Projects'} forwardedRef={projectsRef} />
 
