@@ -19,7 +19,6 @@ interface NavBarProps {
 
 function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
   const handleClick = (ref: React.RefObject<HTMLDivElement | null>) => {
-    console.log(ref.current);
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
