@@ -1,0 +1,8 @@
+.imgContainer {
+  position: relative;
+  height: 100vh;
+}
+
+.img {
+  object-fit: cover;
+}

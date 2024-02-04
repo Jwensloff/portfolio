@@ -8,6 +8,7 @@ import Projects from './components/Projects/Projects';
 import Navbar from './components/Navbar/navbar';
 import { useRef } from 'react';
 import SectionHeaders from './components/SectionHeaders/SectionHeaders';
+import TestComp from './components/test/test';
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -16,31 +17,23 @@ export default function Home() {
   const contactRef = useRef<HTMLDivElement | null>(null);
 
   return (
-      <main className={styles.main}>
-        <Navbar
-          introRef={introRef}
-          aboutRef={aboutRef}
-          projectsRef={projectsRef}
-          contactRef={contactRef}
-        />
-        <DynamicIntro introRef={introRef} />
-        <SectionHeaders
-          text={'About-Me'}
-          forwardedRef={aboutRef}
-        />
-        <AboutMe />
-        <SectionHeaders
-          text={'Coding-Projects'}
-          forwardedRef={projectsRef}
-        />
+    <main className={styles.main}>
+      <Navbar
+        introRef={introRef}
+        aboutRef={aboutRef}
+        projectsRef={projectsRef}
+        contactRef={contactRef}
+      />
+      <DynamicIntro introRef={introRef} />
+      <AboutMe />
+      <TestComp />
+      <SectionHeaders text={'About-Me'} forwardedRef={aboutRef} />
+      <SectionHeaders text={'Coding-Projects'} forwardedRef={projectsRef} />
 
-        <Projects />
-        <SectionHeaders
-          text={'Contact-Me'}
-          forwardedRef={contactRef}
-        />
+      <Projects />
+      <SectionHeaders text={'Contact-Me'} forwardedRef={contactRef} />
 
-        <ContactMe />
-      </main>
+      <ContactMe />
+    </main>
   );
 }
