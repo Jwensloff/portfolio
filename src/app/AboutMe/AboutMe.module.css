@@ -129,12 +129,26 @@
 }
 
 @media (max-width: 1050px) {
-  /* .container {
-    min-height: 100vh;
-  } */
+  .animatedHeaders h3,
+  .animatedHeaders h4,
+  .animatedHeaders h5 {
+    position: relative;
+    left: 0%;
+    bottom: -100vh;
+  }
+
+  @keyframes textAnimation {
+    0% {
+      bottom: -100%;
+    }
+    100% {
+      bottom: 0%;
+    }
+  }
+
   .innerContainer {
     max-width: 95%;
-    padding: 0.5rem;
+    padding: 1rem;
   }
   .leftContent {
     padding: 0px;
@@ -170,11 +184,18 @@
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding-top: 0.5rem;
+  }
+
   .imgContainer {
     max-width: 200px;
     max-height: 200px;
   }
   .textContainer p {
     margin-top: 0.25rem;
+  }
+  .leftContent h2 {
+    font-size: 2rem;
   }
 }

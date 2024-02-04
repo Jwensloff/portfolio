@@ -3,10 +3,6 @@ import Image from 'next/image';
 import styles from './AboutMe.module.css';
 import { useInView } from 'react-intersection-observer';
 
-type AboutMeProps = {
-  // aboutRef: React.RefObject<HTMLElement | null>;
-};
-
 const AboutMe = () => {
   const { ref: textRef, inView } = useInView();
   const [animate, setAnimate] = useState<boolean>(false);
