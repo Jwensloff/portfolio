@@ -29,9 +29,7 @@ function ContactMe() {
   };
 
   return (
-    <section
-      className={styles.container}
-    >
+    <section className={styles.container}>
       <div className={styles.innerContainer}>
         <div className={styles.contentWrapper}>
           <h1 className={styles.text}>Let's connect</h1>
@@ -51,7 +49,7 @@ function ContactMe() {
             onClick={() => setDisplayForm(!displayForm)}
             className={styles.message}
           >
-            Send me a message
+            {displayForm ? 'Close' : 'Send me a message'}
           </button>
         </div>
         <div

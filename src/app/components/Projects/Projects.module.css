@@ -54,7 +54,7 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: rgba(170,185,192, 0.3);
+  background-color: rgba(170, 185, 192, 0.3);
 }
 
 .frontCard:hover,
@@ -62,8 +62,7 @@
   box-shadow: 10px 10px 5px #333;
   width: 101%;
   height: 101%;
-  background-color: rgba(170,185,192, 0.4);
-
+  background-color: rgba(170, 185, 192, 0.4);
 }
 
 .logoContainer {
@@ -85,7 +84,7 @@
 }
 
 .backCard {
-  background-color: rgba(170,185,192, 0.3);
+  background-color: rgba(170, 185, 192, 0.3);
   transform: rotateY(180deg);
 }
 
@@ -99,10 +98,8 @@
 
 .imgContainer {
   position: relative;
-  height: 300px;
-  width: 500px;
-  /* margin-top: 1rem;
-  margin-bottom: 1rem; */
+  height: 275px;
+  width: 450px;
 }
 
 .img {
@@ -135,19 +132,11 @@
   gap: 1rem;
 }
 
-@media (max-width: 1200px) {
-  /* .individual {
-    height: 300px;
-    width: 400px;
-  }
+@media (max-width: 1160px) {
   .imgContainer {
-    height: 300px;
-    width: 400px;
+    height: 200px;
+    width: 350px;
   }
-  .individual:hover .hiddentContent {
-    height: 300px;
-    width: 400px;
-  } */
 }
 
 @media (max-width: 1000px) {
@@ -155,37 +144,42 @@
     height: 250px;
     width: 300px;
   }
-  .individual {
-    height: 250px;
-    width: 300px;
-  }
-  .individual:hover .hiddentContent {
-    height: 250px;
-    width: 300px;
-  }
 }
 
 @media (max-width: 800px) {
-  .projectsContainer {
+  .innerContainer {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .card {
+    height: 45vh;
+  }
+
   .imgContainer {
-    height: 300px;
-    width: 400px;
-  }
-  .individual {
-    height: 300px;
-    width: 400px;
-  }
-  .individual:hover .hiddentContent {
     height: 300px;
     width: 400px;
   }
 }
 
 @media (max-width: 520px) {
+  .card {
+    height: 40vh;
+  }
+  .backCard {
+    gap: 0.5rem;
+    overflow-y: scroll;
+  }
+  .backCard a,
+  .backCard button,
+  .frontCard button {
+    height: 1.75rem;
+  }
+  .logoContainer {
+    height: 3.5rem;
+  }
   .innerContainer {
-    padding: 10px;
+    padding: 1rem;
+    grid-gap: 1rem;
   }
   .imgContainer {
     height: 250px;
@@ -201,31 +195,12 @@
   }
 }
 
-@media (max-width: 400px) {
-  .projName {
-    font-size: 1.5rem;
+@media (max-width: 450px) {
+  .card {
+    height: 45vh;
   }
-
   .imgContainer {
     height: 175px;
     width: 200px;
-  }
-  .individual {
-    height: 175px;
-    width: 200px;
-    overflow: hidden;
-  }
-  .individual:hover .hiddentContent {
-    height: 175px;
-    width: 200px;
-  }
-
-  .hiddentContent {
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  .hiddentContent p {
-    margin-top: 10rem;
   }
 }
