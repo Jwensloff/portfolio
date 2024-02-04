@@ -20,8 +20,9 @@
 }
 
 .innerContainer {
+  border-radius: 10px;
+
   padding: 4rem;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +96,8 @@
 }
 
 .resumeButton {
+  border-radius: 10px;
+
   padding: 10px 20px;
   background-color: rgb(220, 215, 215);
   color: rgb(0 31 63);
@@ -111,6 +114,8 @@
 }
 
 .image {
+  border-radius: 10px;
+
   object-fit: contain;
 }
 

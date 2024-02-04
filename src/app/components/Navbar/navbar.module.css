@@ -26,13 +26,16 @@
   background-color: rgb(0 31 63);
   color: lightgray;
 }
+
 span:hover .homeBtn,
 span:hover .aboutBtn,
 span:hover .projectsBtn,
-span:hover .contactBt {
+span:hover .contactBtn {
   background-color: rgb(0 31 63);
   color: lightgray;
   cursor: pointer;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 span:hover .text {
@@ -43,12 +46,15 @@ span:hover .text {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .homeBtn,
 .aboutBtn,
 .projectsBtn,
 .contactBtn {
+  border-radius: 10px;
   background-color: lightgray;
   border: 1px solid rgb(0 31 63);
   padding: 0.5rem;
