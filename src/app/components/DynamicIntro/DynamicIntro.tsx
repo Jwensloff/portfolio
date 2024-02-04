@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './DynamicIntro.module.css';
-import TestComp from '../test/test';
 
 type DynamicIntroProps = {
   introRef: React.RefObject<HTMLElement | null>;
