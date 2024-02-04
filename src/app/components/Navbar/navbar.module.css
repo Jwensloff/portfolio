@@ -84,6 +84,7 @@ span:hover .text {
     padding: 0.5rem;
     width: 3rem;
     height: 3rem;
+    border-radius: 10px;
   }
   .menuButton:hover {
     cursor: pointer;
