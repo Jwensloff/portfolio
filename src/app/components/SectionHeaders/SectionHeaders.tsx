@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
+import React, { useEffect, LegacyRef } from 'react';
 import styles from './SectionHeaders.module.css';
 import Image from 'next/image';
 import Aos from 'aos';
@@ -9,7 +11,7 @@ import { faUser, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 
 interface SectionHeadersProps {
   text: string;
-  forwardedRef: React.RefObject<HTMLElement | null>;
+  forwardedRef: LegacyRef<HTMLElement> | undefined;
   photoPosition: string;
 }
 
@@ -22,7 +24,7 @@ const SectionHeaders = ({
     Aos.init({ duration: 500 });
   }, []);
 
-  const currentIcon = () => {
+  const currentIcon = (): IconProp => {
     if (text.includes('About')) {
       return faUser;
     } else if (text.includes('Project')) {
@@ -30,15 +32,13 @@ const SectionHeaders = ({
     } else if (text.includes('Contact')) {
       return faEnvelope;
     }
+    return faUser;
   };
 
   const editedText = text.replace('-', ' ');
 
   return (
-    <section
-      ref={forwardedRef}
-      className={`${styles.container}`}
-    >
+    <section ref={forwardedRef} className={`${styles.container}`}>
       <div className={styles.textContainer}>
         <h2>
           <FontAwesomeIcon className={styles.fa} icon={currentIcon()} />
