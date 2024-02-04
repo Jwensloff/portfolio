@@ -5,7 +5,7 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 0rem;
-  paddingl: 1rem;
+  padding: 1rem;
   background-color: #aab9c0;
 }
 
@@ -162,6 +162,7 @@
 
   .innerContainer {
     max-width: 95%;
+    padding: 3rem;
   }
   .leftContent {
     padding: 0px;
@@ -170,6 +171,7 @@
     display: flex;
     flex-direction: column;
   }
+
   .textContainer {
     text-align: center;
     width: 100%;
@@ -194,13 +196,19 @@
   .textContainer p {
     margin-top: 5px;
   }
+  .leftContent h2 {
+    text-align: center;
+  }
 }
 
 @media (max-width: 500px) {
   .container {
     padding-top: 0.5rem;
   }
-
+  .innerContainer {
+    width: 90%;
+    padding: 1rem;
+  }
   .imgContainer {
     max-width: 200px;
     max-height: 200px;
@@ -208,7 +216,13 @@
   .textContainer p {
     margin-top: 0.25rem;
   }
+
   .leftContent h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+  .textContainer h3,
+  .textContainer h4,
+  .textContainer h5 {
+    font-size: 1rem;
   }
 }
