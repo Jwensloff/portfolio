@@ -22,7 +22,7 @@ const DynamicIntro = ({ introRef }: DynamicIntroProps) => {
         className={styles.heroImg}
         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
       />
-      {/* <div className={styles.innerContainer}>
+      <div className={styles.innerContainer}>
         <div className={styles.imgContainer}>
           <Image
             src='/jw-high-resolution-logo.jpg'
@@ -36,7 +36,7 @@ const DynamicIntro = ({ introRef }: DynamicIntroProps) => {
           <h1>JOCELYN WENSLOFF</h1>
           <p>SOFTWARE ENGINEER</p>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
