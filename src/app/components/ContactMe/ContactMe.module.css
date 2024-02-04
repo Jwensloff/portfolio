@@ -10,7 +10,7 @@
 }
 
 .innerContainer {
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,12 +72,12 @@
 }
 
 .input {
+  border-radius: 10px;
   width: 100%;
   height: 35px;
   margin: 1rem 0rem 1rem 0rem;
   padding: 7px;
   outline: none;
-  border-radius: 5px;
   border: 1px solid rgb(220, 220, 220);
 }
 
@@ -100,16 +100,18 @@
 }
 
 .message {
+  border-radius: 10px;
   font-size: 1.5rem;
   margin-top: 1rem;
   border: 1px solid;
   padding: 0.5rem;
-  border-radius: 5px;
 }
 
 .message:hover {
   cursor: pointer;
-  background-color: rgba(200, 207, 229, 0.5);
+  background-color: rgb(0 31 63);
+  color: lightgray;
+  border: 1px solid lightgray;
 }
 
 .nameEmail {
@@ -128,8 +130,9 @@
   min-height: 100px;
   padding: 7px;
   outline: none;
-  border-radius: 5px;
   border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+
 }
 
 .textarea:focus {
@@ -141,12 +144,18 @@
 }
 
 .sendButton {
+  border-radius: 10px;
+
   width: 100%;
   height: 35px;
-  border-radius: 5px;
   border: 1px solid rgb(5, 59, 112);
   margin-top: 1rem;
   cursor: pointer;
+}
+.sendButton:hover {
+  background-color: rgb(0 31 63);
+  color: lightgray;
+  border: 1px solid lightgray;
 }
 
 .icon {
@@ -163,6 +172,8 @@
 .text {
   font-size: 3rem;
   text-align: center;
+    border-radius: 10px;
+
 }
 
 @media (max-width: 800px) {

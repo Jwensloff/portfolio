@@ -59,7 +59,9 @@
   animation-timeline: view();
   animation-range: exit;
 }
-
+.img {
+  border-radius: 10px;
+}
 .imgContainer {
   margin-bottom: 1rem;
   position: relative;

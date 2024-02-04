@@ -19,6 +19,8 @@
   }
 }
 .innerContainer {
+  border-radius: 10px;
+
   background-color: snow;
   color: black;
   display: grid;
@@ -27,7 +29,6 @@
   min-height: 100vh;
   width: 90%;
   padding: 2rem;
-  border-radius: 20px;
   box-shadow: 10px 10px 5px grey;
   transform-origin: top;
   animation: component-animation linear;
@@ -36,18 +37,17 @@
 }
 
 .card {
-  border-radius: 20px;
   position: relative;
   perspective: 1000px;
 }
 
 .innerCard {
-  border-radius: 20px;
   position: absolute;
   width: 100%;
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+
 }
 
 .card.innerCard {
@@ -57,7 +57,6 @@
 .frontCard,
 .backCard {
   padding: 1rem;
-  border-radius: 20px;
   box-shadow: 5px 5px 5px grey;
   display: flex;
   gap: 1rem;
@@ -68,6 +67,8 @@
   height: 100%;
   backface-visibility: hidden;
   background-color: rgba(170, 185, 192, 0.3);
+  border-radius: 10px;
+
 }
 
 .frontCard:hover,
@@ -76,6 +77,8 @@
   width: 101%;
   height: 101%;
   background-color: rgba(170, 185, 192, 0.4);
+  border-radius: 10px;
+
 }
 
 .logoContainer {
@@ -99,6 +102,8 @@
 .backCard {
   background-color: rgba(170, 185, 192, 0.3);
   transform: rotateY(180deg);
+  border-radius: 10px;
+
 }
 
 .backCard p {
