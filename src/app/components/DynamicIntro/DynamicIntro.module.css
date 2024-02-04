@@ -19,6 +19,9 @@
 
   transform-origin: top;
   animation: header-image-animation linear forwards;
+  -webkit-animation: header-image-animation linear forwards;
+  -moz-animation: header-image-animation linear forwards;
+  -o-animation: header-image-animation linear forwards;
   animation-timeline: view();
   animation-range: exit;
 }
@@ -30,9 +33,43 @@
   90%,
   100% {
     opacity: 0;
-    /* scale: 2; */
+    scale: 2;
   }
 }
+@-webkit-keyframes header-image-animation {
+  20% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+    scale: 2;
+  }
+}
+
+@-moz-keyframes header-image-animation{
+  20% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+    scale: 2;
+  }
+}
+
+@-o-keyframes header-image-animation {
+  20% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    opacity: 0;
+    scale: 2;
+  }
+}
+
+
 
 @keyframes fade-out {
   to {
