@@ -166,6 +166,7 @@
   .innerContainer {
     padding: 1rem 0.5rem 1rem 0.5rem;
   }
+
   @keyframes header-image-animation {
     20% {
       opacity: 1;
@@ -176,13 +177,7 @@
       scale: 1;
     }
   }
-  
-  .heroImg {
-    animation: none;
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation:none;
-  }
+
 }
 
 @media (max-width: 300px) {
