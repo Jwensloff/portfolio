@@ -48,6 +48,7 @@
 @media (max-width: 500px) {
   .textContainer h2 {
     font-size: 1.5rem;
+    animation: none;
   }
 
   .circle::after {
