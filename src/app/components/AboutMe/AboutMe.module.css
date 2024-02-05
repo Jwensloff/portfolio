@@ -6,7 +6,8 @@
   flex-direction: column;
   padding-bottom: 0rem;
   padding: 1rem;
-  background-color: #aab9c0;
+  background-image: linear-gradient(180deg, #aab9c0, snow);
+
 }
 
 @keyframes component-animation {
