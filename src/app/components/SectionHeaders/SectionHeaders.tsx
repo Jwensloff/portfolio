@@ -31,6 +31,7 @@ const SectionHeaders = ({
 
   return (
     <section ref={forwardedRef} className={`${styles.container}`}>
+      <div className={styles.circle}></div>
       <div className={styles.textContainer}>
         <h2>
           <FontAwesomeIcon className={styles.fa} icon={currentIcon()} />

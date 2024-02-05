@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #aab9c0;
+  background-color: snow;
 }
 
 .heroImg {
@@ -33,7 +33,7 @@
   90%,
   100% {
     opacity: 0;
-    /* scale: 2; */
+    scale: 2;
   }
 }
 @-webkit-keyframes header-image-animation {
@@ -43,18 +43,18 @@
   90%,
   100% {
     opacity: 0;
-    /* scale: 2; */
+    scale: 2;
   }
 }
 
-@-moz-keyframes header-image-animation{
+@-moz-keyframes header-image-animation {
   20% {
     opacity: 1;
   }
   90%,
   100% {
     opacity: 0;
-    /* scale: 2; */
+    scale: 2;
   }
 }
 
@@ -65,11 +65,9 @@
   90%,
   100% {
     opacity: 0;
-    /* scale: 2; */
+    scale: 2;
   }
 }
-
-
 
 @keyframes fade-out {
   to {
@@ -170,6 +168,9 @@
 }
 
 @media (max-width: 300px) {
+  .heroImg {
+    animation: none;
+  }
   .textWrapper h1 {
     font-size: 1.5rem;
     font-weight: bold;
