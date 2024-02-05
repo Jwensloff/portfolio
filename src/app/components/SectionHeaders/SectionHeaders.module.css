@@ -36,9 +36,44 @@
   }
 }
 
+@-webkit-keyframes text-animation {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+    scale: 1.35;
+  }
+}
+
+@-moz-keyframes text-animation {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+    scale: 1.35;
+  }
+}
+
+@-o-keyframes text-animation {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  100% {
+    opacity: 1;
+    scale: 1.35;
+  }
+}
 .textContainer {
   transform-origin: top;
   animation: text-animation linear;
+  -webkit-animation: text-animation linear;
+  -moz-animation: text-animation linear;
+  -o-animation: text-animation linear;
   animation-timeline: view();
   animation-range: enter;
   padding: 1rem;
@@ -49,12 +84,16 @@
   .textContainer h2 {
     font-size: 1.5rem;
     animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
   }
 
   .circle::after {
     border-top-left-radius: 50% 70%;
     border-top-right-radius: 50% 70%;
   }
+
   @keyframes text-animation {
     0% {
       opacity: 0;
