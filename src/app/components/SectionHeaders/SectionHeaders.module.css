@@ -96,7 +96,7 @@
 
   @keyframes text-animation {
     0% {
-      opacity: 0;
+      opacity: 1;
     }
     30%,
     100% {
