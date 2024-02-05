@@ -170,6 +170,9 @@
 @media (max-width: 300px) {
   .heroImg {
     animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation:none;
   }
   .textWrapper h1 {
     font-size: 1.5rem;
