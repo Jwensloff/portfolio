@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 85%;
-  /* background-color: #aab9c0; */
+  background-color: #aab9c0;
 }
 
 @keyframes text-animation {
@@ -78,6 +78,7 @@
   animation-range: enter;
   padding: 1rem;
   color: black;
+  z-index: 1;
 }
 
 @media (max-width: 500px) {
