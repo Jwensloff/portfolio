@@ -7,7 +7,6 @@ const Projects = () => {
   const [displayBack, setDisplayBack] = useState<boolean[]>(
     new Array(projectData.length).fill(false)
   );
-
   const handleClick = (index: number) => {
     const newDisplayBack = [...displayBack];
     newDisplayBack[index] = !newDisplayBack[index];
