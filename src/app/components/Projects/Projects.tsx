@@ -15,6 +15,9 @@ const Projects = () => {
   };
 
   let projects = projectData.map((proj, index) => {
+    const ariaHiddenValue = displayBack[index] ? true : false;
+    console.log('aria', ariaHiddenValue);
+    console.log('index', displayBack[index]);
     return (
       <div className={styles.card} key={index}>
         <div
@@ -35,6 +38,7 @@ const Projects = () => {
             <button onClick={() => handleClick(index)}>Learn More</button>
           </div>
           <div className={styles.backCard}>
+            <pre aria-hidden={`${ariaHiddenValue}`}>
               <h2>{proj.name}</h2>
               <p>{proj.description}</p>
               <div className={styles.techContainer}>
@@ -50,17 +54,33 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <div className={styles.anchorContainer}>
-                <a href={proj.repo} className={styles.anchor}>
+              <div
+                className={styles.anchorContainer}
+              >
+                <a
+                  href={proj.repo}
+                  className={styles.anchor}
+                  tabIndex={!ariaHiddenValue ? -1 : 0}
+                >
                   Explore Repo
                 </a>
                 {proj.live && (
-                  <a href={proj.live} className={styles.anchor}>
+                  <a
+                    href={proj.live}
+                    className={styles.anchor}
+                    tabIndex={!ariaHiddenValue ? -1 : 0}
+                  >
                     Visit Site
                   </a>
                 )}
               </div>
-              <button onClick={() => handleClick(index)}>Exit</button>
+              <button
+                onClick={() => handleClick(index)}
+                tabIndex={!ariaHiddenValue ? -1 : 0}
+              >
+                Exit
+              </button>
+            </pre>
           </div>
         </div>
       </div>
