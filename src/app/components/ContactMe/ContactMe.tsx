@@ -34,13 +34,22 @@ function ContactMe() {
         <div className={styles.contentWrapper}>
           <h1 className={styles.text}>Let's connect</h1>
           <div className={styles.anchorContainer}>
-            <a href='https://www.linkedin.com/in/jocelynwensloff/'>
+            <a
+              href='https://www.linkedin.com/in/jocelynwensloff/'
+              aria-label="link to  Jocelyn/'s LinkedIn"
+            >
               <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
             </a>
-            <a href='https://github.com/Jwensloff'>
+            <a
+              href='https://github.com/Jwensloff'
+              aria-label="link to  Jocelyn/'s GitHub"
+            >
               <FontAwesomeIcon icon={faGithub} className={styles.icon} />
             </a>
-            <a href='mailto:jewensloff@gmail.com'>
+            <a
+              href='mailto:jewensloff@gmail.com'
+              aria-label='Link to send Jocelyn an email'
+            >
               <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             </a>
           </div>

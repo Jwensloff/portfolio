@@ -71,8 +71,6 @@
 .frontCard:hover,
 .backCard:hover {
   box-shadow: 10px 10px 5px #333;
-  width: 101%;
-  height: 101%;
   background-color: rgba(170, 185, 192, 0.4);
   border-radius: 10px;
 }

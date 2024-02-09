@@ -43,12 +43,9 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
         <button
           className={`${styles.homeBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(introRef)}
+          aria-label='home'
         >
-          <FontAwesomeIcon
-            className={styles.fa}
-            icon={faHouse}
-            aria-label='home'
-          />
+          <FontAwesomeIcon className={styles.fa} icon={faHouse} />
         </button>
         <p className={styles.text}>Home</p>
       </span>
@@ -56,12 +53,9 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
         <button
           className={`${styles.aboutBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(aboutRef)}
+          aria-label='About me'
         >
-          <FontAwesomeIcon
-            className={styles.fa}
-            icon={faUser}
-            aria-label='About me'
-          />
+          <FontAwesomeIcon className={styles.fa} icon={faUser} />
         </button>
         <p className={styles.text}>About</p>
       </span>
@@ -69,12 +63,9 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
         <button
           className={`${styles.projectsBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(projectsRef)}
+          aria-label='Projects'
         >
-          <FontAwesomeIcon
-            className={styles.fa}
-            icon={faCode}
-            aria-label='Projects'
-          />
+          <FontAwesomeIcon className={styles.fa} icon={faCode} />
         </button>
         <p className={styles.text}>Projects</p>
       </span>
@@ -82,12 +73,9 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
         <button
           className={`${styles.contactBtn} ${hideMenu ? styles.hidden : ''}`}
           onClick={() => handleClick(contactRef)}
+          aria-label='Contact me'
         >
-          <FontAwesomeIcon
-            className={styles.fa}
-            icon={faEnvelope}
-            aria-label='Contact me'
-          />
+          <FontAwesomeIcon className={styles.fa} icon={faEnvelope} />
         </button>
         <p className={styles.text}>Contact</p>
       </span>

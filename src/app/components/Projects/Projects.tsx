@@ -7,6 +7,7 @@ const Projects = () => {
   const [displayBack, setDisplayBack] = useState<boolean[]>(
     new Array(projectData.length).fill(false)
   );
+
   const handleClick = (index: number) => {
     const newDisplayBack = [...displayBack];
     newDisplayBack[index] = !newDisplayBack[index];
@@ -34,33 +35,32 @@ const Projects = () => {
             <button onClick={() => handleClick(index)}>Learn More</button>
           </div>
           <div className={styles.backCard}>
-            <h2>{proj.name}</h2>
-            <p>{proj.description}</p>
-            <div className={styles.techContainer}>
-              {proj.tech.map((tech, index) => (
-                <div className={styles.logoContainer} key={index}>
-                  <Image
-                    key={index}
-                    src={tech.logo}
-                    alt={tech.logo_name}
-                    fill
-                    className={styles.logo}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className={styles.anchorContainer}>
-              <a href={proj.repo} className={styles.anchor}>
-                Explore Repo
-              </a>
-              {proj.live && (
-                <a href={proj.live} className={styles.anchor}>
-                  Visit Site
+              <h2>{proj.name}</h2>
+              <p>{proj.description}</p>
+              <div className={styles.techContainer}>
+                {proj.tech.map((tech, index) => (
+                  <div className={styles.logoContainer} key={index}>
+                    <Image
+                      key={index}
+                      src={tech.logo}
+                      alt={tech.logo_name}
+                      fill
+                      className={styles.logo}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className={styles.anchorContainer}>
+                <a href={proj.repo} className={styles.anchor}>
+                  Explore Repo
                 </a>
-              )}
-            </div>
-
-            <button onClick={() => handleClick(index)}>Exit</button>
+                {proj.live && (
+                  <a href={proj.live} className={styles.anchor}>
+                    Visit Site
+                  </a>
+                )}
+              </div>
+              <button onClick={() => handleClick(index)}>Exit</button>
           </div>
         </div>
       </div>
