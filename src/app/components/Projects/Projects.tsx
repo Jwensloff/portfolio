@@ -37,12 +37,12 @@ const Projects = () => {
             <button onClick={() => handleClick(index)}>Learn More</button>
           </div>
           <div className={styles.backCard} aria-hidden={`${ariaHiddenValue}`}>
-              <h2>{proj.name}</h2>
-              <p>{proj.description}</p>
-              <div className={styles.techContainer}>
-                {proj.tech.map((tech, index) => (
-                  <div className={styles.logoContainer} key={index}>
-                    s
+            <h2>{proj.name}</h2>
+            <p>{proj.description}</p>
+            <div className={styles.techContainer}>
+              {proj.tech.map((tech, index) => (
+                <div className={styles.logoContainer} key={index}>
+                  <div className={styles.logoImgContainer}>
                     <Image
                       key={index}
                       src={tech.logo}
@@ -51,32 +51,34 @@ const Projects = () => {
                       className={styles.logo}
                     />
                   </div>
-                ))}
-              </div>
-              <div className={styles.anchorContainer}>
+                  <p>{tech.logo_name}</p>
+                </div>
+              ))}
+            </div>
+            <div className={styles.anchorContainer}>
+              <a
+                href={proj.repo}
+                className={styles.anchor}
+                tabIndex={ariaHiddenValue ? -1 : 0}
+              >
+                Explore Repo
+              </a>
+              {proj.live && (
                 <a
-                  href={proj.repo}
+                  href={proj.live}
                   className={styles.anchor}
                   tabIndex={ariaHiddenValue ? -1 : 0}
                 >
-                  Explore Repo
+                  Visit Site
                 </a>
-                {proj.live && (
-                  <a
-                    href={proj.live}
-                    className={styles.anchor}
-                    tabIndex={ariaHiddenValue ? -1 : 0}
-                  >
-                    Visit Site
-                  </a>
-                )}
-              </div>
-              <button
-                onClick={() => handleClick(index)}
-                tabIndex={ariaHiddenValue ? -1 : 0}
-              >
-                Exit
-              </button>
+              )}
+            </div>
+            <button
+              onClick={() => handleClick(index)}
+              tabIndex={ariaHiddenValue ? -1 : 0}
+            >
+              Exit
+            </button>
           </div>
         </div>
       </div>
