@@ -19,7 +19,6 @@
 }
 .innerContainer {
   border-radius: 10px;
-
   background-color: snow;
   color: black;
   display: grid;
@@ -48,7 +47,7 @@
   transform-style: preserve-3d;
 }
 
-.card.innerCard {
+.card .innerCard .card:focus .innerCard {
   transform: rotateY(-180deg);
 }
 
@@ -71,17 +70,21 @@
 .frontCard:hover,
 .backCard:hover {
   box-shadow: 10px 10px 5px #333;
-  width: 101%;
-  height: 101%;
   background-color: rgba(170, 185, 192, 0.4);
   border-radius: 10px;
 }
 
-.logoContainer {
+.logoImgContainer {
   height: 4rem;
   width: 4rem;
   position: relative;
-  color: black;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.75rem;
 }
 
 .logo {

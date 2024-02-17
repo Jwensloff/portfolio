@@ -1,12 +1,13 @@
-import styles from './Projects.module.css';
-import projectData from './projectData.json';
-import Image from 'next/image';
-import { useState } from 'react';
+import styles from "./Projects.module.css";
+import projectData from "./projectData.json";
+import Image from "next/image";
+import { useState } from "react";
 
 const Projects = () => {
   const [displayBack, setDisplayBack] = useState<boolean[]>(
     new Array(projectData.length).fill(false)
   );
+
   const handleClick = (index: number) => {
     const newDisplayBack = [...displayBack];
     newDisplayBack[index] = !newDisplayBack[index];
@@ -14,11 +15,13 @@ const Projects = () => {
   };
 
   let projects = projectData.map((proj, index) => {
+    const ariaHiddenValue = displayBack[index] ? false : true;
+
     return (
       <div className={styles.card} key={index}>
         <div
           className={`${styles.innerCard} ${
-            displayBack[index] ? styles.showBack : ''
+            displayBack[index] ? styles.showBack : ""
           }`}
         >
           <div className={styles.frontCard}>
@@ -33,34 +36,49 @@ const Projects = () => {
             </div>
             <button onClick={() => handleClick(index)}>Learn More</button>
           </div>
-          <div className={styles.backCard}>
+          <div className={styles.backCard} aria-hidden={`${ariaHiddenValue}`}>
             <h2>{proj.name}</h2>
             <p>{proj.description}</p>
             <div className={styles.techContainer}>
               {proj.tech.map((tech, index) => (
                 <div className={styles.logoContainer} key={index}>
-                  <Image
-                    key={index}
-                    src={tech.logo}
-                    alt={tech.logo_name}
-                    fill
-                    className={styles.logo}
-                  />
+                  <div className={styles.logoImgContainer}>
+                    <Image
+                      key={index}
+                      src={tech.logo}
+                      alt={tech.logo_name}
+                      fill
+                      className={styles.logo}
+                    />
+                  </div>
+                  <p>{tech.logo_name}</p>
                 </div>
               ))}
             </div>
             <div className={styles.anchorContainer}>
-              <a href={proj.repo} className={styles.anchor}>
+              <a
+                href={proj.repo}
+                className={styles.anchor}
+                tabIndex={ariaHiddenValue ? -1 : 0}
+              >
                 Explore Repo
               </a>
               {proj.live && (
-                <a href={proj.live} className={styles.anchor}>
+                <a
+                  href={proj.live}
+                  className={styles.anchor}
+                  tabIndex={ariaHiddenValue ? -1 : 0}
+                >
                   Visit Site
                 </a>
               )}
             </div>
-
-            <button onClick={() => handleClick(index)}>Exit</button>
+            <button
+              onClick={() => handleClick(index)}
+              tabIndex={ariaHiddenValue ? -1 : 0}
+            >
+              Exit
+            </button>
           </div>
         </div>
       </div>
