@@ -66,7 +66,7 @@ function ContactMe() {
             displayForm ? styles["is-open"] : ""
           }`}
         >
-          <div className={styles.formConainer} aria-expanded={`${displayForm}`}>
+          <div className={styles.formConainer} aria-hidden={`${!displayForm}`}>
             <form ref={formRef} onSubmit={sendEmail} className={styles.form}>
               <div className={styles.nameEmail}>
                 <input
@@ -97,7 +97,7 @@ function ContactMe() {
                 type="submit"
                 value="Send"
                 className={styles.sendButton}
-                aria-expanded={`${displayForm}`}
+                aria-hidden={`${!displayForm}`}
               />
             </form>
           </div>
