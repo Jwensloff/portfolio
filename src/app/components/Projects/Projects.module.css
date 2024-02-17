@@ -19,7 +19,6 @@
 }
 .innerContainer {
   border-radius: 10px;
-
   background-color: snow;
   color: black;
   display: grid;
@@ -48,7 +47,7 @@
   transform-style: preserve-3d;
 }
 
-.card.innerCard {
+.card .innerCard .card:focus .innerCard {
   transform: rotateY(-180deg);
 }
 

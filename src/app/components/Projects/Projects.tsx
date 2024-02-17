@@ -1,7 +1,7 @@
-import styles from './Projects.module.css';
-import projectData from './projectData.json';
-import Image from 'next/image';
-import { useState } from 'react';
+import styles from "./Projects.module.css";
+import projectData from "./projectData.json";
+import Image from "next/image";
+import { useState } from "react";
 
 const Projects = () => {
   const [displayBack, setDisplayBack] = useState<boolean[]>(
@@ -15,14 +15,13 @@ const Projects = () => {
   };
 
   let projects = projectData.map((proj, index) => {
-    const ariaHiddenValue = displayBack[index] ? true : false;
-    console.log('aria', ariaHiddenValue);
-    console.log('index', displayBack[index]);
+    const ariaHiddenValue = displayBack[index] ? false : true;
+
     return (
       <div className={styles.card} key={index}>
         <div
           className={`${styles.innerCard} ${
-            displayBack[index] ? styles.showBack : ''
+            displayBack[index] ? styles.showBack : ""
           }`}
         >
           <div className={styles.frontCard}>
@@ -37,13 +36,14 @@ const Projects = () => {
             </div>
             <button onClick={() => handleClick(index)}>Learn More</button>
           </div>
-          <div className={styles.backCard}>
-            <pre aria-hidden={`${ariaHiddenValue}`}>
+          <div className={styles.backCard} aria-hidden={`${ariaHiddenValue}`}>
+            {/* <pre aria-expanded={`${ariaHiddenValue}`}> */}
               <h2>{proj.name}</h2>
               <p>{proj.description}</p>
               <div className={styles.techContainer}>
                 {proj.tech.map((tech, index) => (
                   <div className={styles.logoContainer} key={index}>
+                    s
                     <Image
                       key={index}
                       src={tech.logo}
@@ -54,13 +54,11 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <div
-                className={styles.anchorContainer}
-              >
+              <div className={styles.anchorContainer}>
                 <a
                   href={proj.repo}
                   className={styles.anchor}
-                  tabIndex={!ariaHiddenValue ? -1 : 0}
+                  tabIndex={ariaHiddenValue ? -1 : 0}
                 >
                   Explore Repo
                 </a>
@@ -68,7 +66,7 @@ const Projects = () => {
                   <a
                     href={proj.live}
                     className={styles.anchor}
-                    tabIndex={!ariaHiddenValue ? -1 : 0}
+                    tabIndex={ariaHiddenValue ? -1 : 0}
                   >
                     Visit Site
                   </a>
@@ -76,11 +74,11 @@ const Projects = () => {
               </div>
               <button
                 onClick={() => handleClick(index)}
-                tabIndex={!ariaHiddenValue ? -1 : 0}
+                tabIndex={ariaHiddenValue ? -1 : 0}
               >
                 Exit
               </button>
-            </pre>
+            {/* </pre> */}
           </div>
         </div>
       </div>
