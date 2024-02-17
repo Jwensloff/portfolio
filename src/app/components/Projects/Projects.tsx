@@ -37,7 +37,6 @@ const Projects = () => {
             <button onClick={() => handleClick(index)}>Learn More</button>
           </div>
           <div className={styles.backCard} aria-hidden={`${ariaHiddenValue}`}>
-            {/* <pre aria-expanded={`${ariaHiddenValue}`}> */}
               <h2>{proj.name}</h2>
               <p>{proj.description}</p>
               <div className={styles.techContainer}>
@@ -78,7 +77,6 @@ const Projects = () => {
               >
                 Exit
               </button>
-            {/* </pre> */}
           </div>
         </div>
       </div>
