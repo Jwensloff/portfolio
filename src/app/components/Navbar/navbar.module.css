@@ -50,6 +50,10 @@ span:hover .text {
   border-bottom-right-radius: 10px;
 }
 
+.span:hover {
+  cursor: pointer;
+}
+
 .homeBtn,
 .aboutBtn,
 .projectsBtn,

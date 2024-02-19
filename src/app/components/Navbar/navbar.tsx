@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import styles from './navbar.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import React, { useState } from "react";
+import styles from "./navbar.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
   faUser,
   faEnvelope,
   faCode,
   faBars,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
 
 interface NavBarProps {
   introRef: React.RefObject<HTMLDivElement | null>;
@@ -19,7 +18,7 @@ interface NavBarProps {
 
 function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
   const handleClick = (ref: React.RefObject<HTMLDivElement | null>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+    ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const [hideMenu, setHideMenu] = useState<boolean>(true);
@@ -33,47 +32,43 @@ function Navbar({ introRef, aboutRef, projectsRef, contactRef }: NavBarProps) {
           <FontAwesomeIcon
             className={styles.fa}
             icon={faBars}
-            aria-label='menu'
+            aria-label="menu"
           />
         ) : (
-          'X'
+          "X"
         )}
       </button>
-      <span>
+      <span className={styles.span} onClick={() => handleClick(introRef)}>
         <button
-          className={`${styles.homeBtn} ${hideMenu ? styles.hidden : ''}`}
-          onClick={() => handleClick(introRef)}
-          aria-label='home'
+          className={`${styles.homeBtn} ${hideMenu ? styles.hidden : ""}`}
+          aria-label="home"
         >
           <FontAwesomeIcon className={styles.fa} icon={faHouse} />
         </button>
         <p className={styles.text}>Home</p>
       </span>
-      <span>
+      <span className={styles.span} onClick={() => handleClick(aboutRef)}>
         <button
-          className={`${styles.aboutBtn} ${hideMenu ? styles.hidden : ''}`}
-          onClick={() => handleClick(aboutRef)}
-          aria-label='About me'
+          className={`${styles.aboutBtn} ${hideMenu ? styles.hidden : ""}`}
+          aria-label="About me"
         >
           <FontAwesomeIcon className={styles.fa} icon={faUser} />
         </button>
         <p className={styles.text}>About</p>
       </span>
-      <span>
+      <span className={styles.span} onClick={() => handleClick(projectsRef)}>
         <button
-          className={`${styles.projectsBtn} ${hideMenu ? styles.hidden : ''}`}
-          onClick={() => handleClick(projectsRef)}
-          aria-label='Projects'
+          className={`${styles.projectsBtn} ${hideMenu ? styles.hidden : ""}`}
+          aria-label="Projects"
         >
           <FontAwesomeIcon className={styles.fa} icon={faCode} />
         </button>
         <p className={styles.text}>Projects</p>
       </span>
-      <span>
+      <span className={styles.span} onClick={() => handleClick(contactRef)}>
         <button
-          className={`${styles.contactBtn} ${hideMenu ? styles.hidden : ''}`}
-          onClick={() => handleClick(contactRef)}
-          aria-label='Contact me'
+          className={`${styles.contactBtn} ${hideMenu ? styles.hidden : ""}`}
+          aria-label="Contact me"
         >
           <FontAwesomeIcon className={styles.fa} icon={faEnvelope} />
         </button>
