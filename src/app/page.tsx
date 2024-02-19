@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
-import styles from './page.module.css';
-import AboutMe from './components/AboutMe/AboutMe';
-import DynamicIntro from './components/DynamicIntro/DynamicIntro';
-import ContactMe from './components/ContactMe/ContactMe';
-import Projects from './components/Projects/Projects';
-import Navbar from './components/Navbar/navbar';
-import { useRef } from 'react';
-import SectionHeaders from './components/SectionHeaders/SectionHeaders';
+"use client";
+import React from "react";
+import styles from "./page.module.css";
+import AboutMe from "./components/AboutMe/AboutMe";
+import DynamicIntro from "./components/DynamicIntro/DynamicIntro";
+import ContactMe from "./components/ContactMe/ContactMe";
+import Projects from "./components/Projects/Projects";
+import Navbar from "./components/Navbar/navbar";
+import { useRef } from "react";
+import SectionHeaders from "./components/SectionHeaders/SectionHeaders";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -24,12 +24,12 @@ export default function Home() {
         contactRef={contactRef}
       />
       <DynamicIntro introRef={introRef} />
-      <SectionHeaders text={'About-Me'} forwardedRef={aboutRef} />
+      <SectionHeaders text={"About-Me"} forwardedRef={aboutRef} />
       <AboutMe />
-      <SectionHeaders text={'Coding-Projects'} forwardedRef={projectsRef} />
+      <SectionHeaders text={"Coding-Projects"} forwardedRef={projectsRef} />
 
       <Projects />
-      <SectionHeaders text={'Contact-Me'} forwardedRef={contactRef} />
+      <SectionHeaders text={"Contact-Me"} forwardedRef={contactRef} />
 
       <ContactMe />
     </main>
