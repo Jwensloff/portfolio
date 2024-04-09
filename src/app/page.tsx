@@ -27,10 +27,8 @@ export default function Home() {
       <SectionHeaders text={"About-Me"} forwardedRef={aboutRef} />
       <AboutMe />
       <SectionHeaders text={"Coding-Projects"} forwardedRef={projectsRef} />
-
       <Projects />
       <SectionHeaders text={"Contact-Me"} forwardedRef={contactRef} />
-
       <ContactMe />
     </main>
   );
