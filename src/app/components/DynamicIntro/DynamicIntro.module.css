@@ -14,86 +14,20 @@
 }
 
 .heroImg {
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
-
   object-fit: cover;
   object-position: center;
   z-index: -1;
   background: fixed;
-  /* transform-origin: top;
-  animation: header-image-animation linear forwards;
-  -webkit-animation: header-image-animation linear forwards;
-  -moz-animation: header-image-animation linear forwards;
-  -o-animation: header-image-animation linear forwards;
-  animation-timeline: view();
-  animation-range: exit; */
-}
-
-@keyframes header-image-animation {
-  20% {
-    opacity: 1;
-  }
-  90%,
-  100% {
-    opacity: 0;
-    scale: 2;
-  }
-}
-
-@-webkit-keyframes header-image-animation {
-  20% {
-    opacity: 1;
-  }
-  90%,
-  100% {
-    opacity: 0;
-    scale: 2;
-  }
-}
-
-@-moz-keyframes header-image-animation {
-  20% {
-    opacity: 1;
-  }
-  90%,
-  100% {
-    opacity: 0;
-    scale: 2;
-  }
-}
-
-@-o-keyframes header-image-animation {
-  20% {
-    opacity: 1;
-  }
-  90%,
-  100% {
-    opacity: 0;
-    scale: 2;
-  }
-}
-
-@keyframes fade-out {
-  to {
-    opacity: 0;
-  }
 }
 
 .innerContainer {
   padding: 5rem 5rem 5rem 5rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  overflow: hidden;
-
-  animation: fade-out linear;
-  animation-timeline: view();
-  animation-range: exit;
 }
 
 .img {
@@ -103,23 +37,11 @@
 .imgContainer {
   margin-bottom: 1rem;
   position: relative;
-  animation: imgAnimation;
-  animation-duration: 3s;
-  animation-fill-mode: backwards;
 }
 
 .textWrapper h1 {
   font-family: "Avenir";
   font-size: 2.75rem;
-}
-
-@keyframes imgAnimation {
-  0% {
-    top: -40vh;
-  }
-  100% {
-    top: 0px;
-  }
 }
 
 .textWrapper {
@@ -128,19 +50,9 @@
   align-items: center;
   position: relative;
   text-align: center;
-  animation: textAnimation;
-  animation-duration: 3s;
-  animation-fill-mode: backwards;
+
 }
 
-@keyframes textAnimation {
-  0% {
-    bottom: -20vh;
-  }
-  100% {
-    bottom: 0px;
-  }
-}
 
 .textWrapper p {
   font-size: 1.5rem;
@@ -174,23 +86,6 @@
     padding: 1rem 0.5rem 1rem 0.5rem;
   }
 
-  @keyframes header-image-animation {
-    20% {
-      opacity: 1;
-    }
-    90%,
-    100% {
-      opacity: 0;
-      scale: 1;
-    }
-  }
-
-  .heroImg {
-    animation: none;
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-  }
 }
 
 @media (max-width: 300px) {

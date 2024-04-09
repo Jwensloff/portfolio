@@ -13,14 +13,6 @@ const DynamicIntro = ({ introRef }: DynamicIntroProps) => {
       className={styles.container}
       ref={introRef as React.RefObject<HTMLElement>}
     >
-      {/* <Image
-        src='/cacti2.jpg'
-        priority
-        alt='cactus hero image'
-        fill
-        className={styles.heroImg}
-        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-      /> */}
       <div className={styles.innerContainer}>
         <div className={styles.imgContainer}>
           <Image
