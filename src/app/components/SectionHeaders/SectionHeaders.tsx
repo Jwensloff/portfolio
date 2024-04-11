@@ -7,7 +7,7 @@ import { faUser, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 
 interface SectionHeadersProps {
   text: string;
-  forwardedRef: LegacyRef<HTMLElement> | undefined;
+  forwardedRef: LegacyRef<HTMLDivElement> | null;
 }
 
 const SectionHeaders = ({
