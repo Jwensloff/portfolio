@@ -23,16 +23,16 @@
     ]
   },
   {
-    "name": "WildScribe",
+    "name": "JSJ Storefront",
     "description": "WildScribe lets users organize and manage their adventures through activity journals, offering features like adding, editing, deleting, and searching for activity logs within each journal.",
-    "img": "/WildScribe.png",
-    "repo": "https://github.com/2305-WildScribe/2305-WildScribe-FE",
-    "live": "",
+    "img": "/jsj.png",
+    "repo": "https://github.com/Jwensloff/JSJStorefront",
+    "live": "https://jsj-storefront.vercel.app/",
     "tech": [
-      { "logo": "/react.png", "logo_name": "React" },
-      { "logo": "/Redux.png", "logo_name": "Redux" },
+      { "logo": "/react.png", "logo_name": "Next.js" },
+      { "logo": "/Redux.png", "logo_name": "Tailwind CSS" },
       { "logo": "/Typescript_logo_2020.png", "logo_name": "TypeScript" },
-      { "logo": "/SASS_logo.png", "logo_name": "SASS" }
+      { "logo": "/SASS_logo.png", "logo_name": "Supabase" }
     ]
   },
   {
