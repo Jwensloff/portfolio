@@ -18,7 +18,7 @@ const Projects = () => {
     const ariaHiddenValue = displayBack[index] ? false : true;
 
     return (
-      <div className={styles.card} key={index}>
+      <div className={styles.card} key={index} onClick={() => handleClick(index)}>
         <div
           className={`${styles.innerCard} ${
             displayBack[index] ? styles.showBack : ""
