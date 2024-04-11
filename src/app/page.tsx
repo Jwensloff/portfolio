@@ -8,6 +8,7 @@ import Projects from "./components/Projects/Projects";
 import Navbar from "./components/Navbar/navbar";
 import { useRef } from "react";
 import SectionHeaders from "./components/SectionHeaders/SectionHeaders";
+import SectionContainer from "./components/SectionContainer/SectionContainer";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -24,12 +25,17 @@ export default function Home() {
         contactRef={contactRef}
       />
       <DynamicIntro introRef={introRef} />
+      
       <SectionHeaders text={"About-Me"} forwardedRef={aboutRef} />
-      <AboutMe />
+      <SectionContainer children={<AboutMe />}/>
+
       <SectionHeaders text={"Coding-Projects"} forwardedRef={projectsRef} />
-      <Projects />
+      <SectionContainer children={<Projects />}/>
+    
       <SectionHeaders text={"Contact-Me"} forwardedRef={contactRef} />
-      <ContactMe />
+      <SectionContainer children={<ContactMe />}/>
+      
+      
     </main>
   );
 }

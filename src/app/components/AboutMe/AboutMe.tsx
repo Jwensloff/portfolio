@@ -13,7 +13,7 @@ const AboutMe = () => {
     }
   }, [inView]);
   return (
-    <section className={styles.container}>
+    // <section className={styles.container}>
       <div className={styles.innerContainer} ref={textRef}>
         <div className={styles.content}>
           <div className={styles.leftContent}>
@@ -60,8 +60,8 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-      </div>
-    </section>
+       </div>
+    // </section>
   );
 };
 

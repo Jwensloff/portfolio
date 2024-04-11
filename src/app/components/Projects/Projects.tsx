@@ -86,9 +86,11 @@ const Projects = () => {
   });
 
   return (
-    <section className={styles.mainContainer}>
-      <div className={styles.innerContainer}>{projects}</div>
-    </section>
+    // <section className={styles.mainContainer}>
+      <div className={styles.grid}>{
+        projects
+        }</div>
+    // </section>
   );
 };
 

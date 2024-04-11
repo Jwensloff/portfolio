@@ -1,4 +1,4 @@
-.container {
+/* .container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@
   animation: component-animation linear;
   animation-timeline: view();
   animation-range: enter;
-}
+} */
 
 .innerContainer h2 {
   margin-bottom: 1rem;
@@ -75,7 +75,7 @@
 
 .content {
   display: flex;
-  width: 90%;
+  width: 100%;
 }
 
 .imgContainer {
