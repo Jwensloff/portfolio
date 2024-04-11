@@ -23,16 +23,16 @@
     ]
   },
   {
-    "name": "WildScribe",
-    "description": "WildScribe lets users organize and manage their adventures through activity journals, offering features like adding, editing, deleting, and searching for activity logs within each journal.",
-    "img": "/WildScribe.png",
-    "repo": "https://github.com/2305-WildScribe/2305-WildScribe-FE",
-    "live": "",
+    "name": "JSJ Storefront",
+    "description": "JSJ is a fake store front where users can search for and purchase (not really) clothing and jewelry. It was a collaboration with 2 other fron end engineers where we wanted to push ourwselves to work with new-to-us technologies",
+    "img": "/jsj.png",
+    "repo": "https://github.com/Jwensloff/JSJStorefront",
+    "live": "https://jsj-storefront.vercel.app/",
     "tech": [
-      { "logo": "/react.png", "logo_name": "React" },
-      { "logo": "/Redux.png", "logo_name": "Redux" },
+      { "logo": "/Nextjs.png", "logo_name": "Next.js" },
+      { "logo": "/Tailwind.png", "logo_name": "Tailwind CSS" },
       { "logo": "/Typescript_logo_2020.png", "logo_name": "TypeScript" },
-      { "logo": "/SASS_logo.png", "logo_name": "SASS" }
+      { "logo": "/supabase.png", "logo_name": "Supabase" }
     ]
   },
   {
