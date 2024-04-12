@@ -1,104 +1,35 @@
-/* .container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 0rem;
-  padding: 1rem;
-  background-image: linear-gradient(180deg, #618fa9, snow);
-
-}
-
-@keyframes component-animation {
-  0% {
-    opacity: 0;
-  }
-  20%,
-  100% {
-    opacity: 1;
-  }
-}
-
-.innerContainer {
-  border-radius: 10px;
-
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  min-height: 90vh;
-  background-color: snow;
-  color: black;
-  box-shadow: 10px 10px 5px grey;
-  transform-origin: top;
-  animation: component-animation linear;
-  animation-timeline: view();
-  animation-range: enter;
-} */
-
-.innerContainer h2 {
-  margin-bottom: 1rem;
-  font-size: 3rem;
+.content h2 {
+  font-size: 2.5rem;
+  font-style: italic;
   color: rgb(0 31 63);
 }
 
-.animatedHeaders h3,
-.animatedHeaders h4,
-.animatedHeaders h5 {
-  position: relative;
-  left: -100%;
-}
-
-.animatedHeaders h3 {
-  animation: textAnimation 3s forwards;
-}
-
-.animatedHeaders h4 {
-  animation: textAnimation 3s 2s forwards;
-}
-
-.animatedHeaders h5 {
-  animation: textAnimation 3s 4s forwards;
-}
-
-@keyframes textAnimation {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0%;
-  }
+.title{
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .content {
   display: flex;
-  width: 100%;
+  width: 85%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  text-align: center;
 }
 
 .imgContainer {
   position: relative;
-  width: 450px;
-  height: 447px;
+  width: 300px;
+  height: 300px;
   overflow: hidden;
-}
-
-.leftContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  position: relative;
-  justify-content: space-evenly;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  border-radius: 50%;
 }
 
 .resumeButton {
   border-radius: 10px;
-
   padding: 10px 20px;
   background-color: rgb(220, 215, 215);
   color: rgb(0 31 63);
@@ -116,13 +47,12 @@
 
 .image {
   border-radius: 10px;
-
   object-fit: contain;
 }
 
 .textContainer {
   overflow: hidden;
-  width: 100%;
+  width: 50%;
   height: 100%;
   text-decoration: none;
   font-size: 20px;
@@ -132,41 +62,20 @@
   padding-top: 5rem;
 }
 
-.textContainer p {
-  margin-top: 1rem;
-}
-
-.textContainer span {
-  font-weight: bolder;
-}
 
 @media (max-width: 1200px) {
-  .textContainer {
+  /* .textContainer {
     display: flex;
     gap: 1rem;
     font-size: 1rem;
-  }
+  } */
 }
 
 @media (max-width: 1050px) {
-  .animatedHeaders h3,
-  .animatedHeaders h4,
-  .animatedHeaders h5 {
-    position: relative;
-    left: 0%;
-    bottom: -100vh;
-  }
+  
 
-  @keyframes textAnimation {
-    0% {
-      bottom: -100%;
-    }
-    100% {
-      bottom: 0%;
-    }
-  }
 
-  .innerContainer {
+  /* .innerContainer {
     max-width: 95%;
     padding: 3rem;
   }
@@ -176,14 +85,15 @@
   .content {
     display: flex;
     flex-direction: column;
-  }
+  } */
 
-  .textContainer {
+  /* .textContainer {
     text-align: center;
     width: 100%;
     padding-top: 0rem;
-  }
-  .resumeButton {
+  } */
+
+  /* .resumeButton {
     padding: 10px 20px;
     background-color: rgb(220, 215, 215);
     color: rgb(0 31 63);
@@ -192,19 +102,19 @@
     cursor: pointer;
     margin-top: 1rem;
     margin-bottom: 1rem;
-  }
+  } */
 
-  .imgContainer {
+  /* .imgContainer {
     max-width: 350px;
     max-height: 350px;
-  }
+  } */
 
-  .textContainer p {
+  /* .textContainer p {
     margin-top: 5px;
   }
   .leftContent h2 {
     text-align: center;
-  }
+  } */
 }
 
 @media (max-width: 500px) {
@@ -232,4 +142,3 @@
     font-size: 1rem;
   }
 }
-

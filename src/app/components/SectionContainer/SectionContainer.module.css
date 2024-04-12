@@ -9,15 +9,7 @@
   , snow);
 }
 
-@keyframes component-animation {
-  0% {
-    opacity: 0;
-  }
-  30%,
-  100% {
-    opacity: 1;
-  }
-}
+
 
 .innerContainer {
   background-color: coral;
@@ -33,10 +25,7 @@
   width: 90%;
   padding: 2rem;
   box-shadow: 10px 10px 5px #333;
-  transform-origin: top;
-  animation: component-animation linear;
-  animation-timeline: view();
-  animation-range: enter;
+ 
 }
 
 @media (max-width: 520px) {
