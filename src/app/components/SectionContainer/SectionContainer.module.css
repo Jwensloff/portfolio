@@ -20,6 +20,7 @@
 }
 
 .innerContainer {
+  background-color: coral;
   border-radius: 10px;
   background-color: snow;
   color: black;

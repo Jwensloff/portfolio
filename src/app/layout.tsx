@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
         {children}
       </body>
     </html>
