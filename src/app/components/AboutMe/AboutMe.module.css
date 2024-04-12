@@ -4,7 +4,7 @@
   color: rgb(0 31 63);
 }
 
-.title{
+.highlights {
   font-weight: bold;
   font-size: 1.25rem;
 }
@@ -62,83 +62,32 @@
   padding-top: 5rem;
 }
 
-
-@media (max-width: 1200px) {
-  /* .textContainer {
-    display: flex;
-    gap: 1rem;
-    font-size: 1rem;
-  } */
-}
-
-@media (max-width: 1050px) {
-  
-
-
-  /* .innerContainer {
-    max-width: 95%;
-    padding: 3rem;
-  }
-  .leftContent {
-    padding: 0px;
-  }
+@media (max-width: 480px) {
   .content {
-    display: flex;
-    flex-direction: column;
-  } */
-
-  /* .textContainer {
-    text-align: center;
-    width: 100%;
-    padding-top: 0rem;
-  } */
-
-  /* .resumeButton {
-    padding: 10px 20px;
-    background-color: rgb(220, 215, 215);
-    color: rgb(0 31 63);
-    text-decoration: none;
-    border: 1px solid rgb(0 31 63);
-    cursor: pointer;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  } */
-
-  /* .imgContainer {
-    max-width: 350px;
-    max-height: 350px;
-  } */
-
-  /* .textContainer p {
-    margin-top: 5px;
+    gap: 1.5rem;
   }
-  .leftContent h2 {
-    text-align: center;
-  } */
+  .content h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .imgContainer {
+    max-width: 175px;
+    max-height: 175px;
+  }
+
+  .highlights,
+  .content p {
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding-top: 0.5rem;
-  }
-  .innerContainer {
-    width: 90%;
-    padding: 1rem;
-  }
-  .imgContainer {
-    max-width: 200px;
-    max-height: 200px;
-  }
-  .textContainer p {
-    margin-top: 0.25rem;
-  }
-
-  .leftContent h2 {
+@media (max-width: 380px) {
+  .content h2 {
     font-size: 1.5rem;
   }
-  .textContainer h3,
-  .textContainer h4,
-  .textContainer h5 {
-    font-size: 1rem;
+  .highlights,
+  .content p {
+    font-size: 0.75rem;
   }
 }

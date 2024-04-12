@@ -8,7 +8,6 @@ import Projects from "./components/Projects/Projects";
 import Navbar from "./components/Navbar/navbar";
 import { useRef } from "react";
 import SectionHeaders from "./components/SectionHeaders/SectionHeaders";
-import SectionContainer from "./components/SectionContainer/SectionContainer";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);

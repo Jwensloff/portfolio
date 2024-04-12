@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import styles from "./AboutMe.module.css";
-import { useInView } from "react-intersection-observer";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const AboutMe = () => {
-  const { ref: textRef, inView } = useInView();
-  const [animate, setAnimate] = useState<boolean>(false);
-
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -24,7 +20,7 @@ const AboutMe = () => {
           className={styles.image}
         />
       </div>
-      <p className={styles.title} data-aos="fade-right">
+      <p className={styles.highlights} data-aos="fade-right">
         I'm a software engineer, an accessibility advocate, a problem solver,
         and a creative.
       </p>
@@ -33,12 +29,12 @@ const AboutMe = () => {
         I bring a demonstrated ability to quickly learn and adapt to new
         challenges, and offer unique solutions to complex problems. Drawing
         inspiration from the natural world and human connection, I offer a clean
-        UX, a stong work ethic, and a sarcastic sense of humor.
+        UX, a strong work ethic, and a wry sense of humor.
       </p>
-      <h4 data-aos="fade-right">
+      <p className = {styles.highlights} data-aos="fade-right">
         I specialize in React, Next.js, TypeScript, and other front end
         technologies.
-      </h4>
+      </p>
       <a
         data-aos="fade-left"
         className={styles.resumeButton}
