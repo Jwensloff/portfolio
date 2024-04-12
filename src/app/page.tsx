@@ -24,12 +24,21 @@ export default function Home() {
         contactRef={contactRef}
       />
       <DynamicIntro introRef={introRef} />
-      <SectionHeaders text={"About-Me"} forwardedRef={aboutRef} />
-      <AboutMe />
-      <SectionHeaders text={"Coding-Projects"} forwardedRef={projectsRef} />
-      <Projects />
-      <SectionHeaders text={"Contact-Me"} forwardedRef={contactRef} />
-      <ContactMe />
+      <SectionHeaders
+        text={"About-Me"}
+        forwardedRef={aboutRef}
+        children={<AboutMe />}
+      />
+      <SectionHeaders
+        text={"Coding-Projects"}
+        forwardedRef={projectsRef}
+        children={<Projects />}
+      />
+      <SectionHeaders
+        text={"Contact-Me"}
+        forwardedRef={contactRef}
+        children={<ContactMe />}
+      />
     </main>
   );
 }

@@ -29,8 +29,7 @@ function ContactMe() {
   };
 
   return (
-    <section className={styles.container}>
-      <div className={styles.innerContainer}>
+    <>
         <div className={styles.contentWrapper}>
           <h1 className={styles.text}>Let's connect</h1>
           <div className={styles.anchorContainer}>
@@ -102,8 +101,7 @@ function ContactMe() {
             </form>
           </div>
         </div>
-      </div>
-    </section>
+        </>
   );
 }
 
