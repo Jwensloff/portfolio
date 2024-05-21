@@ -18,13 +18,13 @@ const Projects = () => {
     const ariaHiddenValue = displayBack[index] ? false : true;
 
     return (
-      <div className={styles.card} key={index} onClick={() => handleClick(index)}>
+      <div className={styles.card} key={index}>
         <div
           className={`${styles.innerCard} ${
             displayBack[index] ? styles.showBack : ""
           }`}
         >
-          <div className={styles.frontCard}>
+          <div className={styles.frontCard} onClick={() => handleClick(index)}>
             <h2>{proj.name}</h2>
             <div className={styles.imgContainer}>
               <Image
@@ -87,9 +87,7 @@ const Projects = () => {
 
   return (
     // <section className={styles.mainContainer}>
-      <div className={styles.grid}>{
-        projects
-        }</div>
+    <div className={styles.grid}>{projects}</div>
     // </section>
   );
 };
