@@ -1,95 +1,87 @@
+import { useState } from "react";
 import styles from "./Projects.module.css";
 import projectData from "./projectData.json";
-import Image from "next/image";
-import { useState } from "react";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
-const Projects = () => {
-  const [displayBack, setDisplayBack] = useState<boolean[]>(
-    new Array(projectData.length).fill(false)
-  );
+export function Projects() {
+  const [slide, setSlide] = useState<number>(0);
 
-  const handleClick = (index: number) => {
-    const newDisplayBack = [...displayBack];
-    newDisplayBack[index] = !newDisplayBack[index];
-    setDisplayBack(newDisplayBack);
+  const nextSlide = () => {
+    setSlide(slide === projectData.length - 1 ? 0 : slide + 1);
   };
 
-  let projects = projectData.map((proj, index) => {
-    const ariaHiddenValue = displayBack[index] ? false : true;
-
-    return (
-      <div className={styles.card} key={index}>
-        <div
-          className={`${styles.innerCard} ${
-            displayBack[index] ? styles.showBack : ""
-          }`}
-        >
-          <div className={styles.frontCard} onClick={() => handleClick(index)}>
-            <h2>{proj.name}</h2>
-            <div className={styles.imgContainer}>
-              <Image
-                src={proj.img}
-                alt={`screenshot of ${proj.name}`}
-                fill
-                className={styles.image}
-              />
-            </div>
-            <button onClick={() => handleClick(index)}>Learn More</button>
-          </div>
-          <div className={styles.backCard} aria-hidden={`${ariaHiddenValue}`}>
-            <h2>{proj.name}</h2>
-            <p>{proj.description}</p>
-            <div className={styles.techContainer}>
-              {proj.tech.map((tech, index) => (
-                <div className={styles.logoContainer} key={index}>
-                  <div className={styles.logoImgContainer}>
-                    <Image
-                      key={index}
-                      src={tech.logo}
-                      alt={tech.logo_name}
-                      fill
-                      className={styles.logo}
-                    />
-                  </div>
-                  <p>{tech.logo_name}</p>
-                </div>
-              ))}
-            </div>
-            <div className={styles.anchorContainer}>
-              <a
-                href={proj.repo}
-                className={styles.anchor}
-                tabIndex={ariaHiddenValue ? -1 : 0}
-              >
-                Explore Repo
-              </a>
-              {proj.live && (
-                <a
-                  href={proj.live}
-                  className={styles.anchor}
-                  tabIndex={ariaHiddenValue ? -1 : 0}
-                >
-                  Visit Site
-                </a>
-              )}
-            </div>
-            <button
-              onClick={() => handleClick(index)}
-              tabIndex={ariaHiddenValue ? -1 : 0}
-            >
-              Exit
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  });
+  const prevSlide = () => {
+    setSlide(slide === 0 ? projectData.length - 1 : slide - 1);
+  };
 
   return (
-    // <section className={styles.mainContainer}>
-    <div className={styles.grid}>{projects}</div>
-    // </section>
+    <div className={styles.carousel}>
+      <button
+        className={styles.arrowLeft}
+        onClick={prevSlide}
+        tabIndex={0}
+        aria-label="Previous Slide"
+      >
+        <BsArrowLeftCircleFill />
+      </button>
+      {projectData.map((project, index) => (
+        <div
+          key={index}
+          className={slide === index ? styles.slide : styles.slideHidden}
+        >
+          <h2>{project.name}</h2>
+          <img className={styles.image} src={project.img} alt={project.name} />
+          <p className={styles.description}>{project.description}</p>
+          <div className={styles.techContainer}>
+            <h3>Tech stack:</h3>
+            {project.tech.map((tech, index) => (
+              <div className={styles.logoContainer} key={index}>
+                <p>{tech.tech_name}</p>
+              </div>
+            ))}
+          </div>
+          <div className={styles.anchorContainer}>
+            <a
+              href={project.repo}
+              className={styles.anchor}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Repo
+            </a>
+            {project.live && (
+              <a
+                href={project.live}
+                className={styles.anchor}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Site
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+      <button
+        className={styles.arrowRight}
+        onClick={nextSlide}
+        tabIndex={0}
+        aria-label="Next Slide"
+      >
+        <BsArrowRightCircleFill />
+      </button>
+      <span className={styles.indicators}>
+        {projectData.map((project, index) => (
+          <button
+            key={index}
+            onClick={() => setSlide(index)}
+            className={slide === index ? styles.indicator : styles.inactive}
+            aria-label={`view ${project.name} slide`}
+          ></button>
+        ))}
+      </span>
+    </div>
   );
-};
+}
 
 export default Projects;
