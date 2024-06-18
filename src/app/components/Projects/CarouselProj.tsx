@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./Projects.module.css";
 import projectData from "./projectData.json";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import Image from "next/image";
 
 export function CarouselProj() {
   const [slide, setSlide] = useState(0);
@@ -16,51 +17,67 @@ export function CarouselProj() {
 
   return (
     <div className={styles.carousel}>
-      <BsArrowLeftCircleFill className={styles.arrowLeft} onClick={prevSlide} />
+      <button
+        className={styles.arrowLeft}
+        onClick={prevSlide}
+        tabIndex={0}
+        aria-label="Previous Slide"
+      >
+        <BsArrowLeftCircleFill />
+      </button>
       {projectData.map((project, index) => (
         <div
           key={index}
           className={slide === index ? styles.slide : styles.slideHidden}
         >
           <h2>{project.name}</h2>
-          <img
-            className={styles.image}
-            src={project.img}
-            alt={project.name}
-          />
-          <div>
-            <p>{project.description}</p>
-            <a
-              href={project.repo}
-              className={styles.anchor}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore Repo
-            </a>
-            {project.live && (
+          <img className={styles.image} src={project.img} alt={project.name} />
+            <p className={styles.description}>{project.description}</p>
+            <div className={styles.techContainer}>
+              <h3>Tech stack:</h3>
+              {project.tech.map((tech, index) => (
+                <div className={styles.logoContainer} key={index}>
+                  <p>{tech.tech_name}</p>
+                </div>
+              ))}
+            </div>
+            <div className={styles.anchorContainer}>
               <a
-                href={project.live}
+                href={project.repo}
                 className={styles.anchor}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit Site
+                Explore Repo
               </a>
-            )}
-          </div>
+              {project.live && (
+                <a
+                  href={project.live}
+                  className={styles.anchor}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Site
+                </a>
+              )}
+            </div>
         </div>
       ))}
-      <BsArrowRightCircleFill
+      <button
         className={styles.arrowRight}
         onClick={nextSlide}
-      />
+        tabIndex={0}
+        aria-label="Next Slide"
+      >
+        <BsArrowRightCircleFill />
+      </button>
       <span className={styles.indicators}>
-        {projectData.map((_, index) => (
+        {projectData.map((project, index) => (
           <button
             key={index}
             onClick={() => setSlide(index)}
             className={slide === index ? styles.indicator : styles.inactive}
+            aria-label={`view ${project.name} slide`}
           ></button>
         ))}
       </span>
