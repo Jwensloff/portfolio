@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <ColorSchemeScript />
+      </head>
+
       <body className={inter.className}>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-        {children}
+        <MantineProvider>
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
