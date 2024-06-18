@@ -4,11 +4,9 @@ import styles from "./page.module.css";
 import AboutMe from "./components/AboutMe/AboutMe";
 import DynamicIntro from "./components/DynamicIntro/DynamicIntro";
 import ContactMe from "./components/ContactMe/ContactMe";
-import Projects from "./components/Projects/Projects";
 import Navbar from "./components/Navbar/navbar";
 import { useRef } from "react";
 import SectionHeaders from "./components/SectionHeaders/SectionHeaders";
-import { createTheme, MantineProvider } from "@mantine/core";
 import CarouselProj from "./components/Projects/CarouselProj";
 
 export default function Home() {
