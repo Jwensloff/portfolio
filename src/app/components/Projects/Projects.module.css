@@ -17,7 +17,6 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 7px #666;
   height: 90%;
@@ -34,7 +33,7 @@
 }
 
 .image {
-  height: 50%;
+  width: 75%;
 }
 
 .description {
@@ -74,7 +73,7 @@
 .indicators {
   display: flex;
   position: absolute;
-  bottom: 1rem;
+  bottom: -0.5rem;
 }
 
 .indicator {
@@ -109,11 +108,13 @@
 }
 
 .techContainer {
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  /* text-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .techContainer p {
@@ -123,8 +124,7 @@
   font-weight: bold;
 }
 
-.anchor,
-.card button {
+.anchor {
   border-radius: 10px;
   text-decoration: none;
   color: rgb(0 31 63);
@@ -151,99 +151,24 @@
   gap: 1rem;
 }
 
-@media (max-width: 1200px) {
-  .imgContainer {
-    width: 350px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 1130px) {
-  .imgContainer {
-    width: 300px;
-    height: 225px;
-  }
-}
-
 @media (max-width: 1000px) {
-  .imgContainer {
-    width: 250px;
-    height: 200px;
+  .techContainer p {
+    /* font-size: 0.75rem; */
+    padding: 0.15rem;
+  }
+  .techContainer h3 {
+    font-size: 0.85rem;
   }
 }
 
-@media (max-width: 900) {
-  .imgContainer {
-    width: 250px;
-    height: 175;
-  }
-}
-
-@media (max-width: 800px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
+@media (max-width: 768px) {
+  .techContainer p {
+    font-size: 0.75rem;
   }
 
-  .card {
-    height: 45vh;
-  }
-
-  .imgContainer {
-    height: 275px;
-    width: 350px;
-  }
-}
-
-@media (max-width: 700px) {
-  .imgContainer {
-    width: 250px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 520px) {
-  .card {
-    height: 40vh;
-  }
-  .backCard {
-    gap: 0.5rem;
-    overflow-y: scroll;
-  }
-  .backCard a,
-  .backCard button,
-  .frontCard button {
-    height: 1.75rem;
-  }
-  .logoContainer {
-    height: 3.5rem;
-  }
-  .grid {
-    padding: 1rem;
-    grid-gap: 1rem;
-  }
-  .imgContainer {
-    height: 200px;
-    width: 250px;
-  }
-  .individual {
-    height: 250px;
-    width: 300px;
-  }
-  .individual:hover .hiddentContent {
-    height: 250px;
-    width: 300px;
-  }
-}
-
-@media (max-width: 450px) {
-  .card {
-    height: 45vh;
-  }
-  .imgContainer {
-    height: 150px;
-    width: 175px;
-  }
-  .mainContainer {
-    padding-bottom: 1.5rem;
+  .anchor {
+    height: 2rem;
+    width: 5rem;
+    font-size: 0.75rem;
   }
 }
