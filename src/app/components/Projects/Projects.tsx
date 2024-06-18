@@ -2,10 +2,9 @@ import { useState } from "react";
 import styles from "./Projects.module.css";
 import projectData from "./projectData.json";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-import Image from "next/image";
 
-export function CarouselProj() {
-  const [slide, setSlide] = useState(0);
+export function Projects() {
+  const [slide, setSlide] = useState<number>(0);
 
   const nextSlide = () => {
     setSlide(slide === projectData.length - 1 ? 0 : slide + 1);
@@ -32,35 +31,35 @@ export function CarouselProj() {
         >
           <h2>{project.name}</h2>
           <img className={styles.image} src={project.img} alt={project.name} />
-            <p className={styles.description}>{project.description}</p>
-            <div className={styles.techContainer}>
-              <h3>Tech stack:</h3>
-              {project.tech.map((tech, index) => (
-                <div className={styles.logoContainer} key={index}>
-                  <p>{tech.tech_name}</p>
-                </div>
-              ))}
-            </div>
-            <div className={styles.anchorContainer}>
+          <p className={styles.description}>{project.description}</p>
+          <div className={styles.techContainer}>
+            <h3>Tech stack:</h3>
+            {project.tech.map((tech, index) => (
+              <div className={styles.logoContainer} key={index}>
+                <p>{tech.tech_name}</p>
+              </div>
+            ))}
+          </div>
+          <div className={styles.anchorContainer}>
+            <a
+              href={project.repo}
+              className={styles.anchor}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Repo
+            </a>
+            {project.live && (
               <a
-                href={project.repo}
+                href={project.live}
                 className={styles.anchor}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Explore Repo
+                Visit Site
               </a>
-              {project.live && (
-                <a
-                  href={project.live}
-                  className={styles.anchor}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Site
-                </a>
-              )}
-            </div>
+            )}
+          </div>
         </div>
       ))}
       <button
@@ -85,4 +84,4 @@ export function CarouselProj() {
   );
 }
 
-export default CarouselProj;
+export default Projects;

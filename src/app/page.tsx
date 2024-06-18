@@ -7,7 +7,7 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import Navbar from "./components/Navbar/navbar";
 import { useRef } from "react";
 import SectionHeaders from "./components/SectionHeaders/SectionHeaders";
-import CarouselProj from "./components/Projects/CarouselProj";
+import CarouselProj from "./components/Projects/Projects";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
